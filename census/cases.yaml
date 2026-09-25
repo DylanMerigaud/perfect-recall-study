@@ -1,0 +1,283 @@
+# Census evidence, one entry per included repository (see population.csv for the
+# full population and the excluded majority). Each episode pairs a self-generated
+# claim with an independent finding, both as exact quotes at a pinned commit,
+# re-read from the repository itself at docs/PLAN-PAPER-2026-09-25.md T17, never
+# copied from the plan's own draft table. tier is T-A/T-B/T-C per the codebook in
+# section 2.4; who names what produced the independent finding. A 'note' field
+# records a correction against the plan's draft table when one was found.
+# verify.py shallow-clones each repo at its sha and asserts every quote is present
+# within 3 lines of its cited line; an 'external' independent_check entry (a live
+# fact outside the repository, such as a GitHub issue or PR) is skipped by
+# verify.py and left for a human or a live API re-check.
+
+repos:
+- repo: dossier-preflight
+  sha: 2235d50abf39d0b0e952fedd082672d7003f25b9
+  episodes:
+  - id: dossier-preflight-01-ink-blind-spot
+    claim: The ink sensor retained for required_field held validation.recall 1.0 on the held-out synthetic
+      seed (8 of 9 checks in the file read 1.0; forbidden_value is the one exception at 0.9965277777777778,
+      line 4606). An independent probe adding real foreign ink to the same field measured 1.000 false
+      negatives for that sensor (n=151).
+    self_generated:
+    - file: grid/results/resume.json
+      line: 42
+      quote: '"recall": 1.0,'
+    independent_check:
+    - file: parasitic-ink-probe/FINDING.md
+      line: 33
+      quote: '| ink (RETAINED by the grid) | **1.000** | [0.975, 1.000] | 151 |'
+    tier: T-A
+    who: constructed ground truth (the probe knows where it put the ink)
+    note: The plan's draft table cited parasitic-ink-probe/results.jsonl for the n=151 figure; that file
+      holds only the raw per-reading rows. The aggregated number is stated in FINDING.md. The '8 of 9'
+      count is derived by counting the file's 9 top-level checks, not a literal phrase in resume.json.
+  - id: dossier-preflight-02-targeted-parasite
+    claim: A targeted run laying foreign ink directly on the required_field zone at 1% intensity (level
+      0.01) found the ink sensor fired 0 of 81 times, confirming the probe's finding under a second, independent
+      synthetic construction.
+    self_generated:
+    - file: grid/results/resume.json
+      line: 42
+      quote: '"recall": 1.0,'
+    independent_check:
+    - file: grid/results/target_parasite.json
+      line: 71
+      quote: '"fired": 0,'
+    tier: T-A
+    who: constructed ground truth (the probe knows where it put the ink)
+    note: null
+- repo: airlock
+  sha: 84591f952564fe579586248ab64af8671b434145
+  episodes:
+  - id: airlock-01-status-hides-brand-miss
+    claim: Every gate scored 100% precision and recall on the run's per-gate status table across all 16
+      assets (10 real public-domain Prelinger ads plus 6 synthetic assets). Scored apart from that status,
+      brand identification on the 10 real spots named the correct brand for only 4 of 10 and named the
+      wrong company for 6 of 10, a failure the coarse BLOCK/PASS status hid because the policy blocks
+      on any brand the registry does not know.
+    self_generated:
+    - file: eval/EVAL.md
+      line: 41
+      quote: '| rights | 16 | 10 | 0 | 6 | 0 | 100% (10 of 10) | 100% (10 of 10) |'
+    independent_check:
+    - file: eval/EVAL.md
+      line: 80
+      quote: 'Brand named: 40% (4 of 10).'
+    - file: eval/EVAL.md
+      line: 124
+      quote: Video Intelligence named the wrong company at high confidence
+    tier: T-B
+    who: hand labels, labeller not named in the repo
+    note: 'Correction: the plan''s draft table described the self-generated score as ''100% precision
+      and recall on 16 synthetic assets''. EVAL.md line 1 and the per-gate table (n=16) actually cover
+      10 real archival ads plus 6 synthetic assets together, not 16 synthetic ones.'
+- repo: fintech-roast
+  sha: a0da316c4245585e4203fe45a81b8118d65e2991
+  episodes:
+  - id: fintech-roast-01-field-run
+    claim: On the planted-bug fixture the auditors reached 30/35 recall and 53/53 genuine-defect precision,
+      with the adversarial verifier refuting 0 of 53 findings. A field run on medusajs/medusa at a pinned
+      commit produced 16 findings, of which the adversarial pass (a model, not a human) confirmed 4, called
+      2 likely, and refuted 10.
+    self_generated:
+    - file: eval/RESULTS.md
+      line: 14
+      quote: Recall | 30 / 35 = **86%**
+    - file: eval/RESULTS.md
+      line: 16
+      quote: Precision (genuine defect) | 53 / 53 = **100%**
+    independent_check:
+    - file: eval/FIELD-REPORT-2.md
+      line: 20
+      quote: '| findings emitted by auditors | 16 |'
+    - file: eval/FIELD-REPORT-2.md
+      line: 23
+      quote: '| refuted before reporting | 10 |'
+    tier: T-C
+    who: 'field verdicts: the tool''s own model verifier (FIELD-REPORT-2.md:108, not human-verified)'
+    note: null
+  - id: fintech-roast-02-upstream-confirmation
+    claim: 'The one confirmed finding from the Medusa field run (issue #16012, filed by the author) was
+      independently labelled a bug by the upstream maintainers and closed by a third-party pull request
+      (#16097) that explicitly cites #16012 and merged 2026-07-22, external to any evidence this repository
+      controls.'
+    self_generated:
+    - file: eval/RESULTS.md
+      line: 44
+      quote: The adversarial pass refuted nothing this run (0 of 53).
+    independent_check:
+    - external: github.com/medusajs/medusa
+      line: null
+      quote: 'issue #16012 labelled type: bug, closed; PR #16097 (merged 2026-07-22T17:35:42Z) authored
+        by a third party (''Meliceanu''), body reads ''Reported and analyzed in #16012'''
+    tier: T-A
+    who: third party (medusajs maintainers and an external contributor; verified live via gh api on 2026-09-25,
+      not a file at a pinned sha)
+    note: This episode's independent_check entry is a live GitHub API fact (issue and PR metadata), not
+      a file in the fintech-roast repository; verify.py skips 'external' entries rather than shallow-cloning
+      medusajs/medusa.
+- repo: trimwrit
+  sha: 423b42c0e3b1038ca44f9e039e8fc3a701cdc0fa
+  episodes:
+  - id: trimwrit-01-dead-graders
+    claim: 'A suite of 32 injection cases was reported by trimwrit run as 32 of 32 resisted. The graders
+      behind that score were dead: a YAML/regex escaping bug meant every pattern containing \s matched
+      nothing, discovered only by proving the grader could never fire.'
+    self_generated:
+    - file: CHANGELOG.md
+      line: 103
+      quote: The second pass reported 32 of 32
+    independent_check:
+    - file: CHANGELOG.md
+      line: 104
+      quote: The graders were dead.
+    tier: T-A
+    who: mechanical proof (a regex grader shown structurally unable to fire)
+    note: null
+  - id: trimwrit-02-contaminated-baseline
+    claim: The three-runs-per-arm ablation for the em-dash case read 1.00 with the rule and 1.00 without
+      it (INERT). The 'without' arm had been contaminated by the operator's own global CLAUDE.md, which
+      Claude Code loads regardless of working directory; after the runner was fixed to isolate setting
+      sources, the same case read 1.00 with the rule and 0.00 without it.
+    self_generated:
+    - file: README.md
+      line: 130
+      quote: 0002-no-em-dash-anywhere               1.00      1.00   +0.00  INERT, passes without the
+        rule too
+    independent_check:
+    - file: CHANGELOG.md
+      line: 246
+      quote: With the fix, the em-dash case scores 1.00 with the rule and 0.00 without it.
+    tier: T-A
+    who: mechanical proof (the runner's own before/after ablation, re-run after a fix)
+    note: null
+  - id: trimwrit-03-llm-judge-failure
+    claim: Case 0005 scored 1.00 with its rule and 0.67 without it (n=3 per arm); its own LLM judge had
+      failed 4 of 4 runs that the mechanical grader passed, until the case was rewritten.
+    self_generated:
+    - file: README.md
+      line: 132
+      quote: 0005-decision-last-and-short           1.00      0.67   +0.33  earns its place
+    independent_check:
+    - file: README.md
+      line: 140
+      quote: an llm judge that failed four runs out of four
+    tier: T-C
+    who: an LLM judge (the failing grader) versus a mechanical grader (the one that passed); the disagreement
+      is between two automated graders, not a human
+    note: null
+- repo: blazonry
+  sha: 8947c25afae31306f2212a8bdb2eab7da26f8e4f
+  episodes:
+  - id: blazonry-01-rejected-marks-pass-gate
+    claim: The test suite (59 tests, no network) passes in full. Of the 14 generated marks Dylan rejected
+      by eye, 13 still pass the gate's density check and 12 of 14 pass construction, because those two
+      mechanical floors were calibrated against a peer set contaminated by wordmarks.
+    self_generated:
+    - file: README.md
+      line: 147
+      quote: 'npm test              # 59 tests, no network'
+    independent_check:
+    - file: scripts/gate.mjs
+      line: 47
+      quote: 13 of the 14 marks Dylan rejected out of hand
+    tier: T-B
+    who: Dylan, one reader
+    note: null
+- repo: bankfile
+  sha: b941e1de12c397390e6135899b714d261bc10c79
+  episodes:
+  - id: bankfile-01-reversed-credit
+    claim: 'The suite (551 tests, 98% coverage, 18 documented bank deviations) did not catch a reversed-credit
+      bug: mt940 negated amounts for a D mark but not an RC mark, so money leaving the account read as
+      income. The arithmetic reconciliation check found it on a real fixture from the 54-file vendored
+      MT940 corpus, copied from wolph/mt940''s own test suite.'
+    self_generated:
+    - file: README.md
+      line: 19
+      quote: 551 tests, 98% coverage
+    independent_check:
+    - file: README.md
+      line: 194
+      quote: No test caught it.
+    - file: CHANGELOG.md
+      line: 82
+      quote: Found by balance arithmetic, not by a test.
+    - file: tests/fixtures/mt940/README.md
+      line: 3
+      quote: 54 real statement files, copied verbatim from the test suite of
+    tier: T-A
+    who: 'an objective oracle (arithmetic: opening balance plus entries must equal the closing balance
+      the file states)'
+    note: The '54 real third-party MT940 files' figure is not at README.md:192-195 or CHANGELOG.md:80-82
+      as the plan's draft table implied; it is stated at tests/fixtures/mt940/README.md:3. Cited only
+      at commits after 397f922; commit 8ba571f is never cited or linked, per the plan's instruction.
+  - id: bankfile-02-spec-found-field-bug
+    claim: A dependency version bump remapped MT940 subfield ?31 from applicant_iban to applicant_name.
+      Measured on the vendored corpus, this produced a wrong counterparty_name on 59 transactions across
+      5 files, caught by checking the field mapping against the DFUe-Abkommen Anlage 3 spec, not by any
+      test.
+    self_generated:
+    - file: README.md
+      line: 19
+      quote: 551 tests, 98% coverage
+    independent_check:
+    - file: CHANGELOG.md
+      line: 19
+      quote: 59 transactions across 5 files
+    tier: T-A
+    who: the spec (DFUe-Abkommen Anlage 3 subfield table)
+    note: null
+- repo: nameproof
+  sha: ad315b2c7362ba96365fc563af9e0a4e18ee8127
+  episodes:
+  - id: nameproof-01-six-wrong-answers
+    claim: The suite grew from 60 to 93 to 109 passing tests across the audit session, none removed. Over
+      the same period the tool shipped six confident wrong answers in a row that no unit test caught,
+      because the tests only checked the code against the author's own beliefs.
+    self_generated:
+    - file: docs/AUDIT-2026-08-25.md
+      line: 261
+      quote: 'Suite: 93 to **109**.'
+    independent_check:
+    - file: README.md
+      line: 717
+      quote: Unit tests caught none of them and could not have.
+    tier: T-C
+    who: the author's own subsequent read (the six failures were noticed by Dylan, not by any test)
+    note: null
+  - id: nameproof-02-doctor-agrees
+    claim: 'The doctor calibration harness checks 12 live cases against answers known from the real world
+      (a launched brand, a large company that does not own its name, a redirected domain, and others).
+      This run agreed on 12 of 12, and reinserting each of three shipped bugs into a scratch copy makes
+      doctor fail as expected on all three: the census''s one M0 agreement episode.'
+    self_generated:
+    - file: docs/AUDIT-2026-08-25.md
+      line: 261
+      quote: 'Suite: 93 to **109**.'
+    independent_check:
+    - file: README.md
+      line: 708
+      quote: 12 agreed, 0 disagreed, 0 could not run
+    tier: T-A
+    who: the world (live search results checked against known real-world answers)
+    note: null
+- repo: dsh-internals
+  sha: 3e686fad535cb2a8030e187ab08e8598fad384ef
+  episodes:
+  - id: dsh-internals-01-existence-only-validator
+    claim: All 270 unique path:line citations passed a machine check that only confirms the file exists
+      and the line is in range (an existence-only check, not a correctness check). Of six load-bearing
+      claims re-derived independently by hand, three counts changed on correction.
+    self_generated:
+    - file: METHOD.md
+      line: 51
+      quote: 'Result: 270 valid, 0 invalid.'
+    independent_check:
+    - file: METHOD.md
+      line: 71
+      quote: The event vocabulary is 44 types, not 45.
+    tier: T-B
+    who: Dylan's session, by hand
+    note: null
