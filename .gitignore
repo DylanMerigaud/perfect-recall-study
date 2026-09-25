@@ -1,0 +1,6 @@
+archive/
+*.jsonl.gz
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
