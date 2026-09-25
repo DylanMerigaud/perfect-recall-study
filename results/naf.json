@@ -1,0 +1,5344 @@
+{
+  "agreement_2x2": {
+    "human_threshold": "comment overlap >= 1%",
+    "n_fields": 165,
+    "pixel_threshold": "0.345pct",
+    "skipped": false,
+    "table": {
+      "human_neg_pixel_neg": 99,
+      "human_neg_pixel_pos": 62,
+      "human_pos_pixel_neg": 0,
+      "human_pos_pixel_pos": 4
+    }
+  },
+  "counts": {
+    "human_label": {
+      "excluded_by_reason": {},
+      "fields_excluded": 0,
+      "fields_in": 5550,
+      "fields_measured": 5550
+    },
+    "images_total": 865,
+    "pixel": {
+      "fields_excluded": 0,
+      "fields_excluded_by_reason": {},
+      "fields_in": 165,
+      "fields_measured": 165,
+      "groups": [
+        "1",
+        "104_1",
+        "106",
+        "107",
+        "108",
+        "131",
+        "132"
+      ],
+      "images_excluded": 0,
+      "images_excluded_by_reason": {},
+      "images_in": 70,
+      "images_measured": 70,
+      "n_groups": 7,
+      "skipped": false
+    }
+  },
+  "human_label_measure": {
+    "per_image": {
+      "004098525_00025": {
+        "group": "210",
+        "n_fields": 104,
+        "n_positive": 5,
+        "share": 0.04807692307692308
+      },
+      "004173988_00005": {
+        "group": "105_1",
+        "n_fields": 1,
+        "n_positive": 1,
+        "share": 1.0
+      },
+      "004173988_00006": {
+        "group": "27_1",
+        "n_fields": 2,
+        "n_positive": 2,
+        "share": 1.0
+      },
+      "004173988_00014": {
+        "group": "10",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00016": {
+        "group": "10",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00022": {
+        "group": "155",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00024": {
+        "group": "53",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004173988_00025": {
+        "group": "53",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004173988_00027": {
+        "group": "16",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00028": {
+        "group": "51",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00034": {
+        "group": "16",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00035": {
+        "group": "51",
+        "n_fields": 18,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00037": {
+        "group": "63",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00047": {
+        "group": "27",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00051": {
+        "group": "16",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00054": {
+        "group": "53_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004173988_00061": {
+        "group": "27",
+        "n_fields": 2,
+        "n_positive": 2,
+        "share": 1.0
+      },
+      "004173988_00065": {
+        "group": "16",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00074": {
+        "group": "105",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00077": {
+        "group": "16",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00080": {
+        "group": "53_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004173988_00100": {
+        "group": "105",
+        "n_fields": 1,
+        "n_positive": 1,
+        "share": 1.0
+      },
+      "004173988_00102": {
+        "group": "105_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004173988_00103": {
+        "group": "27_1",
+        "n_fields": 2,
+        "n_positive": 2,
+        "share": 1.0
+      },
+      "004173988_00122": {
+        "group": "105",
+        "n_fields": 1,
+        "n_positive": 1,
+        "share": 1.0
+      },
+      "004173988_00236": {
+        "group": "105",
+        "n_fields": 3,
+        "n_positive": 1,
+        "share": 0.3333333333333333
+      },
+      "004173988_00251": {
+        "group": "105",
+        "n_fields": 1,
+        "n_positive": 1,
+        "share": 1.0
+      },
+      "004173988_00285": {
+        "group": "105",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191536_00032": {
+        "group": "13",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191536_00034": {
+        "group": "13",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191536_00035": {
+        "group": "13",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191536_00036": {
+        "group": "13",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191536_00038": {
+        "group": "13",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191670_00007": {
+        "group": "86",
+        "n_fields": 9,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00010": {
+        "group": "86",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00033": {
+        "group": "62_1",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00043": {
+        "group": "62_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191670_00065": {
+        "group": "62",
+        "n_fields": 25,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00079": {
+        "group": "62",
+        "n_fields": 18,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00325": {
+        "group": "125_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191670_00330": {
+        "group": "125_1",
+        "n_fields": 74,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00331": {
+        "group": "125",
+        "n_fields": 90,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00332": {
+        "group": "125_1",
+        "n_fields": 161,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00333": {
+        "group": "125",
+        "n_fields": 96,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00334": {
+        "group": "125_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191670_00339": {
+        "group": "125",
+        "n_fields": 100,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00341": {
+        "group": "125_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191670_00343": {
+        "group": "125_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191670_00344": {
+        "group": "125_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004191670_00347": {
+        "group": "125",
+        "n_fields": 95,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00348": {
+        "group": "125_1",
+        "n_fields": 106,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004191670_00349": {
+        "group": "125",
+        "n_fields": 94,
+        "n_positive": 8,
+        "share": 0.0851063829787234
+      },
+      "004191670_00377": {
+        "group": "125_1",
+        "n_fields": 83,
+        "n_positive": 15,
+        "share": 0.18072289156626506
+      },
+      "004191670_00381": {
+        "group": "125_1",
+        "n_fields": 23,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004263357_00005": {
+        "group": "14",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004263357_00011": {
+        "group": "14",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004263357_00019": {
+        "group": "14",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004263357_00021": {
+        "group": "14",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004263357_00025": {
+        "group": "14",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004284105_00007": {
+        "group": "72",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00009": {
+        "group": "72",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00020": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00028": {
+        "group": "21_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00042": {
+        "group": "21",
+        "n_fields": 2,
+        "n_positive": 2,
+        "share": 1.0
+      },
+      "004284105_00055": {
+        "group": "21",
+        "n_fields": 2,
+        "n_positive": 2,
+        "share": 1.0
+      },
+      "004284105_00059": {
+        "group": "10_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004284105_00077": {
+        "group": "72_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00107": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00186": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00209": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00214": {
+        "group": "21_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00216": {
+        "group": "10_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004284105_00284": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00285": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00308": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00332": {
+        "group": "107",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004284105_00341": {
+        "group": "10",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004406594_00006": {
+        "group": "128",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004406594_00010": {
+        "group": "51_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004406594_00012": {
+        "group": "51_1",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004406594_00052": {
+        "group": "128",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004406594_00089": {
+        "group": "128",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004406594_00151": {
+        "group": "128",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004406594_00227": {
+        "group": "128",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004470455_00087": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004470455_00187": {
+        "group": "107",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004470455_00335": {
+        "group": "63",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004475379_00029": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00047": {
+        "group": "18",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004475379_00052": {
+        "group": "18",
+        "n_fields": 11,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004475379_00055": {
+        "group": "18",
+        "n_fields": 10,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004475379_00065": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00069": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00073": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00091": {
+        "group": "8",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00096": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00123": {
+        "group": "57",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00184": {
+        "group": "8",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00191": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00215": {
+        "group": "57",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004475379_00222": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475379_00379": {
+        "group": "117",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004475379_00384": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475436_00018": {
+        "group": "10_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004475436_00032": {
+        "group": "10_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475436_00120": {
+        "group": "133",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004475436_00336": {
+        "group": "10_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004679921_00071": {
+        "group": "138",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004679921_00073": {
+        "group": "138",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004679921_00077": {
+        "group": "138",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004679921_00080": {
+        "group": "138",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004679921_00087": {
+        "group": "138",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004713434_00276": {
+        "group": "2",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004713434_00277": {
+        "group": "2",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004763055_00038": {
+        "group": "74",
+        "n_fields": 21,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004763055_00042": {
+        "group": "74",
+        "n_fields": 24,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004763353_00014": {
+        "group": "169",
+        "n_fields": 14,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004763353_00015": {
+        "group": "169",
+        "n_fields": 14,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004763353_00016": {
+        "group": "169",
+        "n_fields": 25,
+        "n_positive": 1,
+        "share": 0.04
+      },
+      "004786715_00019": {
+        "group": "32",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004786715_00068": {
+        "group": "32",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004831974_00027": {
+        "group": "80_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004831974_00036": {
+        "group": "80_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004831974_00043": {
+        "group": "80_3",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004831974_00053": {
+        "group": "80",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004831974_00064": {
+        "group": "80_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004831974_00065": {
+        "group": "80_4",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004831974_00094": {
+        "group": "80_4",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004831974_00113": {
+        "group": "80",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004831974_00131": {
+        "group": "80_3",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004831974_00191": {
+        "group": "80_1",
+        "n_fields": 5,
+        "n_positive": 1,
+        "share": 0.2
+      },
+      "004832573_00044": {
+        "group": "65",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004832573_00050": {
+        "group": "65",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004857625_00020": {
+        "group": "47_1",
+        "n_fields": 22,
+        "n_positive": 6,
+        "share": 0.2727272727272727
+      },
+      "004857625_00021": {
+        "group": "47_1",
+        "n_fields": 24,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004857625_00025": {
+        "group": "196",
+        "n_fields": 29,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004857625_00026": {
+        "group": "196",
+        "n_fields": 28,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004857625_00037": {
+        "group": "47_2",
+        "n_fields": 19,
+        "n_positive": 1,
+        "share": 0.05263157894736842
+      },
+      "004857625_00042": {
+        "group": "47",
+        "n_fields": 38,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004857625_00045": {
+        "group": "47",
+        "n_fields": 52,
+        "n_positive": 1,
+        "share": 0.019230769230769232
+      },
+      "004857625_00072": {
+        "group": "47_2",
+        "n_fields": 27,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004934462_00083": {
+        "group": "68",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004934462_00086": {
+        "group": "68",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004934480_00045": {
+        "group": "182_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004934480_00054": {
+        "group": "182_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004934480_00069": {
+        "group": "182_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004950232_00007": {
+        "group": "134",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004950232_00008": {
+        "group": "134",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004950232_00009": {
+        "group": "134",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004950232_00013": {
+        "group": "134",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004950232_00125": {
+        "group": "134",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004955485_00011": {
+        "group": "158",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004955485_00013": {
+        "group": "158",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004955485_00021": {
+        "group": "158",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004955485_00023": {
+        "group": "158",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004955485_00029": {
+        "group": "158",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "004955493_00029": {
+        "group": "96",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004955493_00030": {
+        "group": "96",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004955524_00022": {
+        "group": "136",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004955524_00027": {
+        "group": "136",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004955524_00036": {
+        "group": "136",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "004966385_00014": {
+        "group": "42",
+        "n_fields": 3,
+        "n_positive": 1,
+        "share": 0.3333333333333333
+      },
+      "004966385_00023": {
+        "group": "42",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00007": {
+        "group": "44",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00008": {
+        "group": "75",
+        "n_fields": 23,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00011": {
+        "group": "44",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00014": {
+        "group": "75",
+        "n_fields": 24,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00017": {
+        "group": "44_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00025": {
+        "group": "44_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00036": {
+        "group": "75_1",
+        "n_fields": 22,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00086": {
+        "group": "75_1",
+        "n_fields": 23,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00116": {
+        "group": "44_2",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005025348_00232": {
+        "group": "44_2",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005077644_00014": {
+        "group": "7",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005077644_00017": {
+        "group": "7",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005077644_00068": {
+        "group": "7_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005077644_00071": {
+        "group": "7_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005080663_00023": {
+        "group": "147",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005080663_00032": {
+        "group": "147",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005080663_00056": {
+        "group": "147",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005080663_00057": {
+        "group": "147",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005080663_00195": {
+        "group": "147",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005150587_00024": {
+        "group": "204",
+        "n_fields": 18,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005155894_00048": {
+        "group": "197",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005155894_00177": {
+        "group": "197",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005155894_00193": {
+        "group": "197",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005155894_00265": {
+        "group": "197",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005155894_00298": {
+        "group": "197",
+        "n_fields": 3,
+        "n_positive": 1,
+        "share": 0.3333333333333333
+      },
+      "005155901_00006": {
+        "group": "69",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005155901_00028": {
+        "group": "69",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005157148_00010": {
+        "group": "163",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005157148_00035": {
+        "group": "163",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005157148_00037": {
+        "group": "163",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005157148_00102": {
+        "group": "200",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005157148_00150": {
+        "group": "200",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005157148_00168": {
+        "group": "200",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005157148_00214": {
+        "group": "200",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005157148_00261": {
+        "group": "200",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "005165573_00007": {
+        "group": "5",
+        "n_fields": 9,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005165573_00008": {
+        "group": "5",
+        "n_fields": 9,
+        "n_positive": 1,
+        "share": 0.1111111111111111
+      },
+      "005165626_00225": {
+        "group": "86_1",
+        "n_fields": 10,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005165647_00008": {
+        "group": "86_1",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005189108_00012": {
+        "group": "151",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005189108_00019": {
+        "group": "151",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005189108_00021": {
+        "group": "151",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005189108_00022": {
+        "group": "151",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005189108_00024": {
+        "group": "151",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005240858_00010": {
+        "group": "56",
+        "n_fields": 13,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005240858_00011": {
+        "group": "56",
+        "n_fields": 12,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00008": {
+        "group": "22_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00009": {
+        "group": "22",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00010": {
+        "group": "22",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00013": {
+        "group": "66",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00021": {
+        "group": "66",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00022": {
+        "group": "22_1",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00030": {
+        "group": "22_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00058": {
+        "group": "22_1",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00066": {
+        "group": "22_3",
+        "n_fields": 10,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "005412661_00173": {
+        "group": "22_3",
+        "n_fields": 12,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007110330_00018": {
+        "group": "115",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007110330_00021": {
+        "group": "115",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007110330_00026": {
+        "group": "115",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007110330_00038": {
+        "group": "115",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007110330_00043": {
+        "group": "115",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007110330_00285": {
+        "group": "70",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007110330_00286": {
+        "group": "70",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00026": {
+        "group": "1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00028": {
+        "group": "154",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00031": {
+        "group": "190",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007182398_00032": {
+        "group": "154_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00034": {
+        "group": "1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00035": {
+        "group": "190",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007182398_00037": {
+        "group": "1_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00038": {
+        "group": "190",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007182398_00039": {
+        "group": "154",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00043": {
+        "group": "154_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00045": {
+        "group": "1_1",
+        "n_fields": 6,
+        "n_positive": 1,
+        "share": 0.16666666666666666
+      },
+      "007182398_00047": {
+        "group": "154_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00059": {
+        "group": "154_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00063": {
+        "group": "154_2",
+        "n_fields": 2,
+        "n_positive": 1,
+        "share": 0.5
+      },
+      "007182398_00071": {
+        "group": "154",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00082": {
+        "group": "1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00106": {
+        "group": "1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00117": {
+        "group": "1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00119": {
+        "group": "1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00121": {
+        "group": "1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00129": {
+        "group": "154_2",
+        "n_fields": 2,
+        "n_positive": 1,
+        "share": 0.5
+      },
+      "007182398_00132": {
+        "group": "1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00140": {
+        "group": "154_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00146": {
+        "group": "154_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00148": {
+        "group": "154_2",
+        "n_fields": 3,
+        "n_positive": 1,
+        "share": 0.3333333333333333
+      },
+      "007182398_00161": {
+        "group": "1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007182398_00233": {
+        "group": "1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007191975_00024": {
+        "group": "211",
+        "n_fields": 10,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007270209_00002": {
+        "group": "20",
+        "n_fields": 37,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007270209_00003": {
+        "group": "199",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007270209_00006": {
+        "group": "20",
+        "n_fields": 33,
+        "n_positive": 3,
+        "share": 0.09090909090909091
+      },
+      "007270209_00007": {
+        "group": "199",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007270209_00020": {
+        "group": "157",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007319607_00044": {
+        "group": "205",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372163_00003": {
+        "group": "31",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372163_00004": {
+        "group": "31",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00001": {
+        "group": "177_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00009": {
+        "group": "31_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00014": {
+        "group": "31_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00031": {
+        "group": "85_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00041": {
+        "group": "85_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00054": {
+        "group": "85_3",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00061": {
+        "group": "85_3",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00064": {
+        "group": "177",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00066": {
+        "group": "108",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00067": {
+        "group": "177",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00069": {
+        "group": "108",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00070": {
+        "group": "177",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00072": {
+        "group": "108",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00076": {
+        "group": "85_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00077": {
+        "group": "85_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00082": {
+        "group": "85_4",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00090": {
+        "group": "85_4",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00159": {
+        "group": "85_5",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00161": {
+        "group": "85_5",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00166": {
+        "group": "108",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00181": {
+        "group": "108",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00184": {
+        "group": "108",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00193": {
+        "group": "108",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00196": {
+        "group": "108",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00199": {
+        "group": "108",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00200": {
+        "group": "177_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372205_00203": {
+        "group": "108",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372205_00207": {
+        "group": "177_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007372211_00001": {
+        "group": "85",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007372211_00002": {
+        "group": "164",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007451322_00088": {
+        "group": "162",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007451322_00090": {
+        "group": "162",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007451322_00104": {
+        "group": "162",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007451322_00116": {
+        "group": "162",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007451322_00120": {
+        "group": "162",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007486024_00002": {
+        "group": "36",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007486024_00010": {
+        "group": "24",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007486024_00012": {
+        "group": "36",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007486024_00014": {
+        "group": "24",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007486024_00020": {
+        "group": "195",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007486024_00022": {
+        "group": "195",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007486024_00025": {
+        "group": "195",
+        "n_fields": 1,
+        "n_positive": 1,
+        "share": 1.0
+      },
+      "007486024_00043": {
+        "group": "95",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007486033_00009": {
+        "group": "168",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007486033_00011": {
+        "group": "95",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007486033_00016": {
+        "group": "168",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007486033_00029": {
+        "group": "168",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007494634_00006": {
+        "group": "118",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007494634_00012": {
+        "group": "118",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007494634_00020": {
+        "group": "118",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007494634_00026": {
+        "group": "118",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007494634_00035": {
+        "group": "118",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007499090_00008": {
+        "group": "184",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007535019_00012": {
+        "group": "3",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007535019_00013": {
+        "group": "3",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537852_00015": {
+        "group": "54",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537852_00017": {
+        "group": "54",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00004": {
+        "group": "102",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00103": {
+        "group": "102",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007537867_00158": {
+        "group": "135_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00160": {
+        "group": "135",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00162": {
+        "group": "135",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00166": {
+        "group": "135",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00173": {
+        "group": "102_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00175": {
+        "group": "135",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00182": {
+        "group": "135",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00222": {
+        "group": "135_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00249": {
+        "group": "102_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00272": {
+        "group": "135_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00274": {
+        "group": "135_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00276": {
+        "group": "135_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00327": {
+        "group": "102_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007537867_00345": {
+        "group": "102_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00007": {
+        "group": "161_3",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00008": {
+        "group": "161_1",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00010": {
+        "group": "114",
+        "n_fields": 38,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00012": {
+        "group": "191",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540885_00014": {
+        "group": "148",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540885_00018": {
+        "group": "148",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540885_00019": {
+        "group": "110",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00020": {
+        "group": "148",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540885_00024": {
+        "group": "114",
+        "n_fields": 41,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00027": {
+        "group": "148",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00033": {
+        "group": "148",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00034": {
+        "group": "110",
+        "n_fields": 17,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00038": {
+        "group": "110",
+        "n_fields": 24,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00043": {
+        "group": "114",
+        "n_fields": 41,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00045": {
+        "group": "110",
+        "n_fields": 27,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00051": {
+        "group": "110",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00076": {
+        "group": "114",
+        "n_fields": 38,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00105": {
+        "group": "114",
+        "n_fields": 41,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00106": {
+        "group": "191",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540885_00132": {
+        "group": "191",
+        "n_fields": 11,
+        "n_positive": 5,
+        "share": 0.45454545454545453
+      },
+      "007540885_00137": {
+        "group": "191_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00164": {
+        "group": "191_1",
+        "n_fields": 19,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00169": {
+        "group": "161_1",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00175": {
+        "group": "119",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00181": {
+        "group": "132_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540885_00187": {
+        "group": "119",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00192": {
+        "group": "119",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00208": {
+        "group": "119",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00211": {
+        "group": "119",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00222": {
+        "group": "161_3",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00240": {
+        "group": "191_2",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00270": {
+        "group": "191_1",
+        "n_fields": 13,
+        "n_positive": 7,
+        "share": 0.5384615384615384
+      },
+      "007540885_00280": {
+        "group": "161",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00281": {
+        "group": "161",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00282": {
+        "group": "161",
+        "n_fields": 10,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00283": {
+        "group": "161_3",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00284": {
+        "group": "161_1",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00285": {
+        "group": "161_1",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00324": {
+        "group": "161_2",
+        "n_fields": 10,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00325": {
+        "group": "161_2",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00360": {
+        "group": "161_2",
+        "n_fields": 17,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00397": {
+        "group": "161_2",
+        "n_fields": 13,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540885_00398": {
+        "group": "161_2",
+        "n_fields": 12,
+        "n_positive": 1,
+        "share": 0.08333333333333333
+      },
+      "007540939_00018": {
+        "group": "132",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00022": {
+        "group": "110_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540939_00028": {
+        "group": "78",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00029": {
+        "group": "52",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540939_00032": {
+        "group": "78",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540939_00037": {
+        "group": "110_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00042": {
+        "group": "52",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540939_00045": {
+        "group": "132",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00054": {
+        "group": "132",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00059": {
+        "group": "30",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00061": {
+        "group": "30",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00064": {
+        "group": "167",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00066": {
+        "group": "167",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00093": {
+        "group": "132",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00097": {
+        "group": "132",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00106": {
+        "group": "203",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00108": {
+        "group": "4_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540939_00111": {
+        "group": "132",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00114": {
+        "group": "167",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00126": {
+        "group": "132",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00148": {
+        "group": "110_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00160": {
+        "group": "90",
+        "n_fields": 4,
+        "n_positive": 1,
+        "share": 0.25
+      },
+      "007540939_00183": {
+        "group": "132",
+        "n_fields": 1,
+        "n_positive": 1,
+        "share": 1.0
+      },
+      "007540939_00212": {
+        "group": "132",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00230": {
+        "group": "110_1",
+        "n_fields": 12,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00287": {
+        "group": "203",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00290": {
+        "group": "4_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540939_00320": {
+        "group": "132_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540939_00322": {
+        "group": "132_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007540939_00337": {
+        "group": "132_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007540939_00398": {
+        "group": "132",
+        "n_fields": 6,
+        "n_positive": 1,
+        "share": 0.16666666666666666
+      },
+      "007543935_00008": {
+        "group": "19",
+        "n_fields": 25,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007543935_00009": {
+        "group": "19",
+        "n_fields": 41,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007543935_00013": {
+        "group": "19",
+        "n_fields": 29,
+        "n_positive": 2,
+        "share": 0.06896551724137931
+      },
+      "007543935_00078": {
+        "group": "97",
+        "n_fields": 28,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007543935_00114": {
+        "group": "97",
+        "n_fields": 29,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007579716_00014": {
+        "group": "172",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007579716_00029": {
+        "group": "172",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007579716_00030": {
+        "group": "172",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007579716_00226": {
+        "group": "17",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007579716_00230": {
+        "group": "17",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007579716_00232": {
+        "group": "17",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641596_00274": {
+        "group": "61",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641596_00275": {
+        "group": "61",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641596_00372": {
+        "group": "88",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641596_00373": {
+        "group": "88",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641608_00126": {
+        "group": "6",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641608_00138": {
+        "group": "6",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641608_00208": {
+        "group": "174",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641608_00212": {
+        "group": "174",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641608_00216": {
+        "group": "174",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641608_00228": {
+        "group": "6_1",
+        "n_fields": 9,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641608_00232": {
+        "group": "6_1",
+        "n_fields": 9,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641611_00120": {
+        "group": "140",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641611_00127": {
+        "group": "140",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641611_00129": {
+        "group": "159",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641611_00133": {
+        "group": "159",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641611_00134": {
+        "group": "140",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641611_00136": {
+        "group": "159",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641611_00139": {
+        "group": "159",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641611_00142": {
+        "group": "140",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641611_00144": {
+        "group": "159",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641611_00145": {
+        "group": "140",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641611_00199": {
+        "group": "194",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641611_00329": {
+        "group": "194",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641611_00365": {
+        "group": "194",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641611_00377": {
+        "group": "194",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641611_00393": {
+        "group": "194",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641622_00260": {
+        "group": "145",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641622_00261": {
+        "group": "145",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641622_00262": {
+        "group": "145",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641622_00263": {
+        "group": "145",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641622_00264": {
+        "group": "145",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641631_00122": {
+        "group": "33",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641631_00124": {
+        "group": "33",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641631_00128": {
+        "group": "33_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641631_00133": {
+        "group": "50",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641631_00137": {
+        "group": "50",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641631_00153": {
+        "group": "50_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641631_00155": {
+        "group": "50_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641631_00163": {
+        "group": "33_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641631_00230": {
+        "group": "58_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641631_00232": {
+        "group": "58_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641631_00273": {
+        "group": "58",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641631_00276": {
+        "group": "58",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641633_00123": {
+        "group": "137",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00126": {
+        "group": "79",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00127": {
+        "group": "67",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00130": {
+        "group": "137",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00133": {
+        "group": "79",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00134": {
+        "group": "67",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00135": {
+        "group": "137",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00140": {
+        "group": "137",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00146": {
+        "group": "137",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00150": {
+        "group": "67_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00151": {
+        "group": "137_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00156": {
+        "group": "67_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00158": {
+        "group": "137_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00163": {
+        "group": "137_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00168": {
+        "group": "137_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641633_00173": {
+        "group": "137_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641634_00343": {
+        "group": "89",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641634_00345": {
+        "group": "89",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641634_00352": {
+        "group": "89_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641634_00357": {
+        "group": "89_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641634_00370": {
+        "group": "89_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641634_00372": {
+        "group": "89_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641636_00126": {
+        "group": "34",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641636_00128": {
+        "group": "34",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641636_00151": {
+        "group": "34_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641636_00153": {
+        "group": "34_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641636_00260": {
+        "group": "25_1",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641636_00262": {
+        "group": "25_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641636_00290": {
+        "group": "25",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641636_00292": {
+        "group": "25",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641649_00123": {
+        "group": "39",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641649_00124": {
+        "group": "39",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007641655_00208": {
+        "group": "12_1",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641655_00210": {
+        "group": "12_1",
+        "n_fields": 2,
+        "n_positive": 1,
+        "share": 0.5
+      },
+      "007641655_00212": {
+        "group": "12_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641655_00214": {
+        "group": "12_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641655_00216": {
+        "group": "12_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641655_00218": {
+        "group": "12",
+        "n_fields": 28,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641655_00220": {
+        "group": "12",
+        "n_fields": 21,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641655_00222": {
+        "group": "12",
+        "n_fields": 24,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641655_00224": {
+        "group": "12",
+        "n_fields": 32,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641655_00226": {
+        "group": "12",
+        "n_fields": 30,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641657_00131": {
+        "group": "142",
+        "n_fields": 34,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641657_00132": {
+        "group": "142",
+        "n_fields": 36,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641657_00133": {
+        "group": "142",
+        "n_fields": 36,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641657_00134": {
+        "group": "142",
+        "n_fields": 36,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641657_00141": {
+        "group": "142",
+        "n_fields": 36,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641668_00273": {
+        "group": "76",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007641673_x": {
+        "group": "212",
+        "n_fields": 15,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00019": {
+        "group": "73",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007675709_00025": {
+        "group": "106",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00027": {
+        "group": "106",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00029": {
+        "group": "106",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00030": {
+        "group": "73",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00031": {
+        "group": "106",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00035": {
+        "group": "106",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00041": {
+        "group": "106",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00043": {
+        "group": "106",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00045": {
+        "group": "106",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "007675709_00058": {
+        "group": "106",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675709_00062": {
+        "group": "106",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675712_00021": {
+        "group": "160",
+        "n_fields": 25,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675712_00022": {
+        "group": "43",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675712_00026": {
+        "group": "43",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675712_00027": {
+        "group": "160",
+        "n_fields": 29,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675712_00033": {
+        "group": "160",
+        "n_fields": 11,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "007675712_00119": {
+        "group": "186",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100093596_00026": {
+        "group": "202",
+        "n_fields": 23,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100093596_00028": {
+        "group": "202",
+        "n_fields": 22,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100093596_00222": {
+        "group": "37",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100093596_00224": {
+        "group": "124",
+        "n_fields": 30,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100093596_00226": {
+        "group": "124",
+        "n_fields": 23,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100093596_00229": {
+        "group": "124",
+        "n_fields": 30,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100093596_00231": {
+        "group": "124",
+        "n_fields": 34,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100093596_00233": {
+        "group": "124",
+        "n_fields": 25,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00028": {
+        "group": "127",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00029": {
+        "group": "71",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00040": {
+        "group": "127",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00041": {
+        "group": "71",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00048": {
+        "group": "127",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00054": {
+        "group": "127",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00065": {
+        "group": "127",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00067": {
+        "group": "193",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00075": {
+        "group": "127_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00076": {
+        "group": "71_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00081": {
+        "group": "127_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00082": {
+        "group": "71_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00083": {
+        "group": "127_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00093": {
+        "group": "193",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00101": {
+        "group": "37",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00221": {
+        "group": "193",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00259": {
+        "group": "193",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100101969_00355": {
+        "group": "131_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00357": {
+        "group": "131_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100101969_00399": {
+        "group": "131",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100175952_00004": {
+        "group": "45",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100175952_00006": {
+        "group": "45",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100176364_x": {
+        "group": "207",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100176369_00001": {
+        "group": "141",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100176369_00002": {
+        "group": "29",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100176369_00003": {
+        "group": "141",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100176369_00004": {
+        "group": "29",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100176369_00005": {
+        "group": "141",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100176369_00006": {
+        "group": "93",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100176369_00011": {
+        "group": "92",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100176369_00012": {
+        "group": "93",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100176369_00015": {
+        "group": "141",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100176369_00021": {
+        "group": "141",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100176369_00035": {
+        "group": "92",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100194510_00001": {
+        "group": "9",
+        "n_fields": 12,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100194510_00003": {
+        "group": "9",
+        "n_fields": 12,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100194565_x": {
+        "group": "206",
+        "n_fields": 12,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100214274_00019": {
+        "group": "92_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100214274_00021": {
+        "group": "92_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100214276_x": {
+        "group": "208",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100251356_00001": {
+        "group": "46",
+        "n_fields": 11,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100251356_00002": {
+        "group": "98",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100251356_00005": {
+        "group": "46_2",
+        "n_fields": 9,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100251356_00006": {
+        "group": "173",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100251356_00008": {
+        "group": "98",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100251356_00011": {
+        "group": "46_2",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100251356_00012": {
+        "group": "173",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100251356_00014": {
+        "group": "173",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100251356_00019": {
+        "group": "46_1",
+        "n_fields": 10,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100251356_00025": {
+        "group": "46",
+        "n_fields": 15,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100251356_00067": {
+        "group": "46_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283146_00001": {
+        "group": "23",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00002": {
+        "group": "188",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00004": {
+        "group": "185",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00005": {
+        "group": "192",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283146_00007": {
+        "group": "188",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283146_00008": {
+        "group": "185",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00010": {
+        "group": "188",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00011": {
+        "group": "185",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283146_00017": {
+        "group": "11",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00025": {
+        "group": "11",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00037": {
+        "group": "178",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283146_00038": {
+        "group": "4",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00041": {
+        "group": "23",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00043": {
+        "group": "4_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00046": {
+        "group": "4_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00047": {
+        "group": "178",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283146_00048": {
+        "group": "4",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283146_00065": {
+        "group": "178",
+        "n_fields": 7,
+        "n_positive": 1,
+        "share": 0.14285714285714285
+      },
+      "100283147_00001": {
+        "group": "28",
+        "n_fields": 20,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283147_00014": {
+        "group": "11",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283147_00015": {
+        "group": "192",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283147_00018": {
+        "group": "28",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283147_00023": {
+        "group": "38",
+        "n_fields": 22,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283147_00038": {
+        "group": "38",
+        "n_fields": 22,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283150_00034": {
+        "group": "209",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283153_00009": {
+        "group": "28_1",
+        "n_fields": 22,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283153_00012": {
+        "group": "38_1",
+        "n_fields": 22,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283153_00014": {
+        "group": "28_1",
+        "n_fields": 18,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283153_00017": {
+        "group": "38_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100283153_00160": {
+        "group": "11",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283153_00182": {
+        "group": "11",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283153_00221": {
+        "group": "11",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283155_00002": {
+        "group": "49",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100283155_00003": {
+        "group": "49",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100327867_00030": {
+        "group": "149",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100327867_00032": {
+        "group": "149",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100327867_00033": {
+        "group": "149",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100327867_00034": {
+        "group": "149",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100327867_00036": {
+        "group": "149",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00002": {
+        "group": "84_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100423934_00003": {
+        "group": "91",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00004": {
+        "group": "84_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100423934_00005": {
+        "group": "91",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00006": {
+        "group": "84_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100423934_00009": {
+        "group": "84_3",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100423934_00018": {
+        "group": "84_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00021": {
+        "group": "84_3",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100423934_00026": {
+        "group": "84",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100423934_00027": {
+        "group": "91_1",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00038": {
+        "group": "64",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00056": {
+        "group": "64",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100423934_00077": {
+        "group": "84",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100423934_00078": {
+        "group": "91_1",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00135": {
+        "group": "171",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00137": {
+        "group": "171",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100423934_00156": {
+        "group": "171",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100572410_00019": {
+        "group": "181_2",
+        "n_fields": 59,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100572410_00022": {
+        "group": "182_2",
+        "n_fields": 59,
+        "n_positive": 2,
+        "share": 0.03389830508474576
+      },
+      "100572410_00025": {
+        "group": "94",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100572410_00026": {
+        "group": "165",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100572410_00028": {
+        "group": "150",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100572410_00029": {
+        "group": "123",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100572410_00050": {
+        "group": "183",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100572410_00056": {
+        "group": "183",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100572410_00058": {
+        "group": "181_2",
+        "n_fields": 32,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100572410_00184": {
+        "group": "183",
+        "n_fields": 3,
+        "n_positive": 1,
+        "share": 0.3333333333333333
+      },
+      "100572410_00243": {
+        "group": "94",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100572410_00246": {
+        "group": "182_2",
+        "n_fields": 65,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100572410_00279": {
+        "group": "165",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100572410_00346": {
+        "group": "182_2",
+        "n_fields": 42,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100587124_00007": {
+        "group": "150_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100587124_00009": {
+        "group": "150_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100587124_00011": {
+        "group": "150_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100587124_00012": {
+        "group": "15",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100587124_00013": {
+        "group": "15",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100587124_00014": {
+        "group": "150_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100587124_00015": {
+        "group": "15",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100587124_00016": {
+        "group": "15",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100587124_00019": {
+        "group": "175",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100587124_00040": {
+        "group": "181",
+        "n_fields": 76,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100587124_00118": {
+        "group": "181",
+        "n_fields": 28,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100587124_00356": {
+        "group": "48",
+        "n_fields": 12,
+        "n_positive": 2,
+        "share": 0.16666666666666666
+      },
+      "100587124_00357": {
+        "group": "152",
+        "n_fields": 39,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100587124_00358": {
+        "group": "48_1",
+        "n_fields": 22,
+        "n_positive": 4,
+        "share": 0.18181818181818182
+      },
+      "100587124_00359": {
+        "group": "152",
+        "n_fields": 45,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100601649_00181": {
+        "group": "131_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100601656_00013": {
+        "group": "77",
+        "n_fields": 9,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100601656_00015": {
+        "group": "77",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100601668_00018": {
+        "group": "55",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100601668_00032": {
+        "group": "55",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100601668_00043": {
+        "group": "139",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100601668_00061": {
+        "group": "139",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100601668_00065": {
+        "group": "139",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100601668_00101": {
+        "group": "139",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100601668_00118": {
+        "group": "139",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100601668_00248": {
+        "group": "116_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100601668_00330": {
+        "group": "116_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100601668_00334": {
+        "group": "116_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100613486_00002": {
+        "group": "112",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100613486_00008": {
+        "group": "112",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100613486_00011": {
+        "group": "112",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100613486_00014": {
+        "group": "112",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100613486_00016": {
+        "group": "82",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100613486_00020": {
+        "group": "112",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100613486_00026": {
+        "group": "48",
+        "n_fields": 15,
+        "n_positive": 8,
+        "share": 0.5333333333333333
+      },
+      "100613486_00027": {
+        "group": "152",
+        "n_fields": 31,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100613486_00036": {
+        "group": "48_1",
+        "n_fields": 22,
+        "n_positive": 2,
+        "share": 0.09090909090909091
+      },
+      "100613486_00037": {
+        "group": "152",
+        "n_fields": 43,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100613486_00060": {
+        "group": "152",
+        "n_fields": 51,
+        "n_positive": 12,
+        "share": 0.23529411764705882
+      },
+      "100613486_00108": {
+        "group": "82",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100613486_00200": {
+        "group": "152_1",
+        "n_fields": 70,
+        "n_positive": 2,
+        "share": 0.02857142857142857
+      },
+      "100613486_00340": {
+        "group": "152_1",
+        "n_fields": 33,
+        "n_positive": 14,
+        "share": 0.42424242424242425
+      },
+      "100651536_00015": {
+        "group": "116",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00018": {
+        "group": "131",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00020": {
+        "group": "131",
+        "n_fields": 28,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00022": {
+        "group": "131",
+        "n_fields": 25,
+        "n_positive": 1,
+        "share": 0.04
+      },
+      "100651536_00024": {
+        "group": "131",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00029": {
+        "group": "104",
+        "n_fields": 9,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00034": {
+        "group": "131",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00040": {
+        "group": "116",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00043": {
+        "group": "104",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00044": {
+        "group": "116",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00046": {
+        "group": "116",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00047": {
+        "group": "104",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00054": {
+        "group": "116",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00059": {
+        "group": "104",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00061": {
+        "group": "104",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00105": {
+        "group": "104_1",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00107": {
+        "group": "104_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00208": {
+        "group": "104_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00220": {
+        "group": "104_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00222": {
+        "group": "104_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00337": {
+        "group": "116_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100651536_00358": {
+        "group": "104_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00372": {
+        "group": "104_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100651536_00390": {
+        "group": "104_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100660788_00018": {
+        "group": "60",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00032": {
+        "group": "60_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00036": {
+        "group": "60_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00064": {
+        "group": "60",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00066": {
+        "group": "60_3",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00089": {
+        "group": "131_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100660788_00095": {
+        "group": "131_2",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00097": {
+        "group": "60_3",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00181": {
+        "group": "131_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100660788_00225": {
+        "group": "131_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00227": {
+        "group": "131_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00229": {
+        "group": "60_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00235": {
+        "group": "131_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00241": {
+        "group": "60_1",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00251": {
+        "group": "55_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00305": {
+        "group": "131_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00355": {
+        "group": "131_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660788_00363": {
+        "group": "131",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660790_00053": {
+        "group": "127_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660790_00083": {
+        "group": "127_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660790_00089": {
+        "group": "55_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660792_00287": {
+        "group": "83",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100660792_00291": {
+        "group": "83",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100671129_00032": {
+        "group": "120",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100671129_00043": {
+        "group": "120",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100671129_00093": {
+        "group": "120",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100671129_00095": {
+        "group": "120",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100671129_00099": {
+        "group": "120",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100682131_00025": {
+        "group": "213",
+        "n_fields": 35,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00004": {
+        "group": "179",
+        "n_fields": 19,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00005": {
+        "group": "126",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00015": {
+        "group": "40",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100698583_00021": {
+        "group": "126",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100698583_00023": {
+        "group": "40",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100698583_00024": {
+        "group": "126",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100698583_00029": {
+        "group": "126",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00038": {
+        "group": "176",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00042": {
+        "group": "129_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100698583_00054": {
+        "group": "176",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00055": {
+        "group": "126",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00059": {
+        "group": "179",
+        "n_fields": 20,
+        "n_positive": 1,
+        "share": 0.05
+      },
+      "100698583_00061": {
+        "group": "179",
+        "n_fields": 17,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00062": {
+        "group": "129_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100698583_00070": {
+        "group": "129_1",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00079": {
+        "group": "129_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100698583_00084": {
+        "group": "176",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00157": {
+        "group": "129_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00189": {
+        "group": "126_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100698583_00315": {
+        "group": "126_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100706387_00091": {
+        "group": "104_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100706387_00093": {
+        "group": "104_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100760033_00002": {
+        "group": "81",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100760033_00003": {
+        "group": "100",
+        "n_fields": 15,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00004": {
+        "group": "189",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100760033_00005": {
+        "group": "180",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100760033_00007": {
+        "group": "87_1",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00009": {
+        "group": "100",
+        "n_fields": 15,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00010": {
+        "group": "189",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100760033_00011": {
+        "group": "180",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00013": {
+        "group": "100",
+        "n_fields": 15,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00014": {
+        "group": "189",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100760033_00015": {
+        "group": "180",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00016": {
+        "group": "81",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00019": {
+        "group": "100_1",
+        "n_fields": 16,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00023": {
+        "group": "100",
+        "n_fields": 16,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00031": {
+        "group": "100",
+        "n_fields": 15,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00033": {
+        "group": "100",
+        "n_fields": 19,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00035": {
+        "group": "100",
+        "n_fields": 16,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00045": {
+        "group": "100_1",
+        "n_fields": 16,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00047": {
+        "group": "100",
+        "n_fields": 18,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00053": {
+        "group": "100_1",
+        "n_fields": 16,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00083": {
+        "group": "81_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100760033_00115": {
+        "group": "100_1",
+        "n_fields": 16,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00121": {
+        "group": "87_1",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00126": {
+        "group": "100_1",
+        "n_fields": 16,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100760033_00226": {
+        "group": "81_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100788105_00006": {
+        "group": "35",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100788105_00008": {
+        "group": "35",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100788105_00011": {
+        "group": "59",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100788105_00015": {
+        "group": "59",
+        "n_fields": 8,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100788105_00016": {
+        "group": "35_1",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100788105_00038": {
+        "group": "35_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00002": {
+        "group": "109",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00003": {
+        "group": "109_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00004": {
+        "group": "109",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00005": {
+        "group": "109_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00006": {
+        "group": "99",
+        "n_fields": 19,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802224_00007": {
+        "group": "109_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00008": {
+        "group": "99",
+        "n_fields": 18,
+        "n_positive": 2,
+        "share": 0.1111111111111111
+      },
+      "100802224_00009": {
+        "group": "109_2",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802224_00010": {
+        "group": "143",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00016": {
+        "group": "101_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00017": {
+        "group": "101",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00019": {
+        "group": "201",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802224_00020": {
+        "group": "26",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00023": {
+        "group": "109_2",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00024": {
+        "group": "109_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00025": {
+        "group": "109",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00031": {
+        "group": "109_2",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802224_00033": {
+        "group": "109_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802224_00087": {
+        "group": "109",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00088": {
+        "group": "109_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00089": {
+        "group": "109",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00090": {
+        "group": "109_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00092": {
+        "group": "109_2",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802224_00169": {
+        "group": "101",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00170": {
+        "group": "101_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802224_00171": {
+        "group": "101",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802224_00172": {
+        "group": "101_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802224_00243": {
+        "group": "109",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802226_00002": {
+        "group": "144",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802226_00003": {
+        "group": "113",
+        "n_fields": 74,
+        "n_positive": 1,
+        "share": 0.013513513513513514
+      },
+      "100802226_00005": {
+        "group": "146",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802226_00012": {
+        "group": "146",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100802226_00017": {
+        "group": "146",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802226_00146": {
+        "group": "146_1",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802226_00173": {
+        "group": "146",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100802226_00288": {
+        "group": "146_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "100901188_00029": {
+        "group": "116_1",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "100901188_00075": {
+        "group": "193",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "101023522_00018": {
+        "group": "166",
+        "n_fields": 7,
+        "n_positive": 3,
+        "share": 0.42857142857142855
+      },
+      "101023522_00024": {
+        "group": "166",
+        "n_fields": 5,
+        "n_positive": 1,
+        "share": 0.2
+      },
+      "101023522_00026": {
+        "group": "166",
+        "n_fields": 6,
+        "n_positive": 2,
+        "share": 0.3333333333333333
+      },
+      "101023529_00047": {
+        "group": "131",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101023529_00081": {
+        "group": "131",
+        "n_fields": 2,
+        "n_positive": 1,
+        "share": 0.5
+      },
+      "101023529_00159": {
+        "group": "131",
+        "n_fields": 1,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00013": {
+        "group": "187",
+        "n_fields": 7,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00014": {
+        "group": "111",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00015": {
+        "group": "111_1",
+        "n_fields": 21,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00016": {
+        "group": "111_1",
+        "n_fields": 5,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00017": {
+        "group": "111_1",
+        "n_fields": 29,
+        "n_positive": 8,
+        "share": 0.27586206896551724
+      },
+      "101044939_00018": {
+        "group": "187",
+        "n_fields": 6,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00019": {
+        "group": "111",
+        "n_fields": 3,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00020": {
+        "group": "187",
+        "n_fields": 12,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00021": {
+        "group": "111",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      },
+      "101044939_00026": {
+        "group": "111",
+        "n_fields": 2,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00028": {
+        "group": "111",
+        "n_fields": 4,
+        "n_positive": 0,
+        "share": 0.0
+      },
+      "101044939_00035": {
+        "group": "111_1",
+        "n_fields": 27,
+        "n_positive": 6,
+        "share": 0.2222222222222222
+      },
+      "101044939_00037": {
+        "group": "111_1",
+        "n_fields": 27,
+        "n_positive": 2,
+        "share": 0.07407407407407407
+      },
+      "101044939_00042": {
+        "group": "198",
+        "n_fields": 0,
+        "n_positive": 0,
+        "share": null
+      }
+    },
+    "pooled": {
+      "cluster_bootstrap_95": {
+        "lower": 0.018888216818995666,
+        "n_clusters_images": 556,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "upper": 0.039754811917476346
+      },
+      "k": 159,
+      "n": 5550,
+      "share": 0.028648648648648647,
+      "wilson_95": {
+        "lower": 0.024575332076024844,
+        "upper": 0.03337401005176324
+      }
+    },
+    "threshold": "comment polygon overlap >= 1% of the field's area"
+  },
+  "meta": {
+    "license": "CDLA-Permissive-1.0",
+    "naf_commit": "92df0e0b314e8cff98b4b7805b7323b980f7d6ae",
+    "ts": "2026-09-25T14:28:43.214564+00:00"
+  },
+  "p_naf": {
+    "band": "common",
+    "cluster_bootstrap_95": {
+      "lower": 0.29869822121006956,
+      "n_clusters_images": 56,
+      "n_resamples": 10000,
+      "seed": 20260925,
+      "upper": 0.5378151260504201
+    },
+    "human_label_secondary": {
+      "cluster_bootstrap_95": {
+        "lower": 0.018888216818995666,
+        "n_clusters_images": 556,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "upper": 0.039754811917476346
+      },
+      "share": 0.028648648648648647,
+      "wilson_95": {
+        "lower": 0.024575332076024844,
+        "upper": 0.03337401005176324
+      }
+    },
+    "measure": "pixel_at_0.345pct",
+    "rule": "rare if upper 95% bound < 0.5%, occasional 0.5% to 5%, common above 5%",
+    "share": 0.4,
+    "wilson_95": {
+      "lower": 0.32834532063406646,
+      "upper": 0.4762050532462892
+    }
+  },
+  "pixel_measure": {
+    "skipped": false,
+    "thresholds": {
+      "0.345pct": {
+        "cluster_bootstrap_95": {
+          "lower": 0.29869822121006956,
+          "n_clusters_images": 56,
+          "n_resamples": 10000,
+          "seed": 20260925,
+          "upper": 0.5378151260504201
+        },
+        "k": 66,
+        "n": 165,
+        "share": 0.4,
+        "wilson_95": {
+          "lower": 0.32834532063406646,
+          "upper": 0.4762050532462892
+        }
+      },
+      "1pct": {
+        "cluster_bootstrap_95": {
+          "lower": 0.17351141552511415,
+          "n_clusters_images": 56,
+          "n_resamples": 10000,
+          "seed": 20260925,
+          "upper": 0.40153474399164024
+        },
+        "k": 44,
+        "n": 165,
+        "share": 0.26666666666666666,
+        "wilson_95": {
+          "lower": 0.20506177918201535,
+          "upper": 0.3388890932054811
+        }
+      },
+      "4pct": {
+        "cluster_bootstrap_95": {
+          "lower": 0.0449438202247191,
+          "n_clusters_images": 56,
+          "n_resamples": 10000,
+          "seed": 20260925,
+          "upper": 0.1337579617834395
+        },
+        "k": 14,
+        "n": 165,
+        "share": 0.08484848484848485,
+        "wilson_95": {
+          "lower": 0.05121401057614078,
+          "upper": 0.13737390523018406
+        }
+      }
+    }
+  }
+}
