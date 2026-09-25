@@ -36,6 +36,25 @@ MIN_GROUPS_FOR_PIXEL = 3
 GROUP_MIN_IMAGES = 10
 PIXEL_THRESHOLDS = {"0.345pct": "above_0.345pct", "1pct": "above_1pct", "4pct": "above_4pct"}
 
+# The verdict of the crop audit read on 2026-09-25 AFTER the X3 run (results/naf-reading.md,
+# prereg/PREREG.md "Deviations and amendments, 2026-09-25, after the X3 run"). Written by
+# `combine` so a replay keeps it; it does not change p_naf.band, which stays what the
+# preregistered rule gives on the measure it names.
+VALIDITY = {
+    "pixel_measure_valid": False,
+    "reason": "crop audit: 10 of 14 pixel-positive fields with no comment label carry only "
+              "template residue (the field's own printed dotted or rule line, printed row "
+              "numbers, paper noise) that the consensus holds a few pixels off or not at all; "
+              "7 of 17 medoid fields are positive against a consensus built with themselves; "
+              "the count moves from 80 to 53 of 165 with the dilation radius (0 to 6 px). The "
+              "pixel measure is not a prevalence of foreign ink.",
+    "residue_share_in_sample": {"k": 10, "n": 14},
+    "p_naf_reported_as": "not interpretable",
+    "human_label_band": "occasional",
+    "human_label_role": "exploratory lower bound",
+    "source": "results/naf-reading.md",
+}
+
 
 def now_ts():
     return datetime.now(timezone.utc).isoformat()
@@ -336,6 +355,8 @@ def stage_combine(naf_dir, archive_dir, results_path, naf_commit, license_name, 
                 "cluster_bootstrap_95": human_label["pooled"]["cluster_bootstrap_95"],
             },
         }
+
+    result["validity"] = VALIDITY
 
     os.makedirs(os.path.dirname(results_path) or ".", exist_ok=True)
     with open(results_path, "w", encoding="utf-8") as fh:

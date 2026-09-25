@@ -378,3 +378,70 @@ put H2 at risk on real captures even without marks.
 ## Amendments
 
 None at the time of tagging.
+
+## Deviations and amendments, 2026-09-25, after the X3 run
+
+Written on 2026-09-25, after the tag `prereg-v1` (commit b3995e4, 15:31 +0200) and after the X3
+pixel measure had been run and read. Everything in this section was decided after the tag. The
+text above it is unchanged.
+
+### D1. A 3 px dilation before the consensus vote (T15 step 3, section 3 X3)
+
+- **What.** The plan specifies the consensus blank as the pixelwise median of the registered
+  binarised images. The committed code (`naf/registration.py`, `CONSENSUS_DILATE_RADIUS = 3`)
+  dilates each image's dark mask by 3 px before the majority vote.
+- **Why.** Registration is translate and uniform scale only. A few pixels of residual
+  misalignment kept fine printed ink (a dotted leader line) below the 50% majority on every image
+  of group 132, although it is printed on all of them.
+- **When.** While inspecting the first pixel run's most extreme field (group 132, image
+  007540939_00045, field f46), before `results/naf.json` was first written, after the tag.
+- **Measured effect** (fields at or above each threshold, out of 165; re-run by
+  `naf/diagnostics/crop_audit.py`):
+
+  | consensus | >= 0.345% | >= 1% | >= 4% |
+  |---|---|---|---|
+  | no dilation (the preregistered median) | 80 | 61 | 31 |
+  | 3 px dilation (committed) | 66 | 44 | 14 |
+  | 3 px, each image left out of its own vote | 73 | 48 | 17 |
+  | 6 px dilation | 53 | 32 | 6 |
+
+  The share at 0.345% moves from 0.485 to 0.400 with 3 px. Every variant stays above 5%.
+
+### D2. Each quarter turn is searched separately (T15 step 3)
+
+- **What.** The plan says to register with dossier-preflight's own `register`. The committed
+  code calls `register(..., quarters=(q,))` once for q = 0 and once for q = 2 and keeps the higher
+  final peak (`_register_best_of`), instead of a single `register(..., quarters=(0, 2))`.
+- **Why.** `register` refines only the quarter that wins the coarse round. On group 132, image
+  007540939_00111 (upright) against medoid 007540939_00212, `quarters=(0, 2)` returns turn 2 at
+  peak 0.6042 while `quarters=(0,)` alone returns turn 0 at 0.6189. The coarse round scores the
+  two 0.5970 and 0.5972 (`naf/diagnostics/quarter_trap.py`).
+- **When.** Same inspection as D1, after the tag.
+- **Measured effect.** The share at 0.345% moved from 0.491 to 0.485 (81 to 80 of 165, before
+  D1).
+
+### A1. What P-NAF is reported as
+
+- **The preregistered rule, applied as written.** P-NAF is read on the pixel measure it names:
+  66 of 165 fields, 0.400, Wilson 95% [0.328, 0.476], image-cluster bootstrap 95% [0.299,
+  0.538]. The upper bound is above 5%, so the rule gives **"common"**. That result stays in
+  `results/naf.json` (`p_naf.band`) and is not re-chosen.
+- **Why that measurement is invalid.** A crop audit, done after the number existed
+  (`results/naf-reading.md`), read the pixel-positive fields by eye. 10 of the 14 inspected
+  fields with no comment label hold only template residue: the field's own printed dotted or
+  rule line, or paper noise, which the consensus holds a few pixels off or not at all. 4 of the
+  14 hold real added ink mixed with residue. 7 of the 17 medoid fields come out positive against
+  a consensus that includes the medoid itself. As the table in D1 shows, the count depends on a
+  free parameter. The pixel measure reads registration residue, not a prevalence of foreign ink.
+- **What the paper reports.** P-NAF is reported as **"not interpretable"**. The human-label
+  measure (a NAF `comment` polygon on at least 1% of an `isBlank = 3` field), planned as the
+  measure reported next to it, is reported as an **exploratory lower bound**, labelled as such
+  and not as the P-NAF reading: 159 of 5,550 fields, 2.86%, Wilson 95% [2.46%, 3.34%],
+  image-cluster bootstrap 95% [1.89%, 3.98%] over 556 images. Its band range is "occasional"
+  under either interval. It is a lower bound because NAF's annotators did not label every added
+  mark as a comment: the audit found ditto marks and stray handwriting from a neighbouring row in
+  fields with no comment label.
+- **Section 8.** P-NAF is neither "rare" nor a valid "common". The falsification line on "rare"
+  is therefore not tested. The paper states this.
+- **Machine-readable.** `results/naf.json` carries a `validity` object with
+  `pixel_measure_valid: false`, written by `naf/measure.py combine`.

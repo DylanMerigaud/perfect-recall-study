@@ -5340,5 +5340,17 @@
         }
       }
     }
+  },
+  "validity": {
+    "human_label_band": "occasional",
+    "human_label_role": "exploratory lower bound",
+    "p_naf_reported_as": "not interpretable",
+    "pixel_measure_valid": false,
+    "reason": "crop audit: 10 of 14 pixel-positive fields with no comment label carry only template residue (the field's own printed dotted or rule line, printed row numbers, paper noise) that the consensus holds a few pixels off or not at all; 7 of 17 medoid fields are positive against a consensus built with themselves; the count moves from 80 to 53 of 165 with the dilation radius (0 to 6 px). The pixel measure is not a prevalence of foreign ink.",
+    "residue_share_in_sample": {
+      "k": 10,
+      "n": 14
+    },
+    "source": "results/naf-reading.md"
   }
 }
