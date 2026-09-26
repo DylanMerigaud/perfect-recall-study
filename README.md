@@ -9,8 +9,10 @@ self-generated score was checked against an independent source.
 
 This study is in progress. This repository holds the design, the preregistration, the code that
 will produce every reading and every number, and the checks a manuscript must pass before
-submission. No results are reported yet, and none of the code in this repository is to be read as
-implying a result: a script existing is not a finding.
+submission. The analysis of the generator arms and of the archival forms has run (`results/`);
+the real-capture arm (X2) and the second census coder are still to come, and every result that
+depends on them reads "not tested yet" or "pending coder 2". Results are provisional until the
+manuscript and the Zenodo record are public.
 
 Raw readings, capture images and other large data will be deposited in a Zenodo record with a DOI
 once collection is complete. That record is not published yet. Nothing here should be read as
@@ -39,8 +41,8 @@ final until the Zenodo record and the accompanying manuscript are both public.
 - `tools/` : checks a manuscript draft must pass before submission: substituting numbers from the
   registry, catching a stray hand-typed digit, counting words against a venue's limits, and
   verifying every citation resolves and is actually cited. See below.
-- `results/` : tables, figures and the numbers registry the analysis scripts write. Empty until
-  the analysis runs.
+- `results/` : tables, figures and the numbers registry the analysis scripts write
+  (`analysis/README.md` has the commands; run them with dossier-preflight's virtual environment).
 - `env/` : the pinned package and tool versions the measurements run under, so a reader can rebuild
   the same environment.
 
