@@ -8,6 +8,15 @@ import re
 
 _HEADING_RE = re.compile(r"^(#+)\s+(.*?)\s*$", re.MULTILINE)
 
+# An HTML comment: invisible once rendered, so no manuscript tool counts, checks or substitutes
+# what it holds (a slot for text that is not true yet, such as results still to be measured).
+COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
+
+
+def strip_comments(text):
+    """Return text with every HTML comment removed."""
+    return COMMENT_RE.sub("", text)
+
 
 def headings(text):
     """Yield (level, title, start, end) for every ATX heading line in text.

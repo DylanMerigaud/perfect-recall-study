@@ -86,3 +86,49 @@ def test_protocol_extra_numbers_flags_the_domain_fallback():
     assert R.d["protocol.PX.domain_fallback"]["text"] == "yes"
     assert R.d["protocol.PX.k_1.domain_fallback"]["text"] == "no"
     assert R.d["protocol.PX.k_1.domain_attempts"]["text"] == "96 dpi 0.200, 300 dpi 1.000"
+
+
+def test_pct_short():
+    assert numbers.pct_short(0.005) == "0.5%"
+    assert numbers.pct_short(0.01) == "1%"
+    assert numbers.pct_short(0.0005) == "0.05%"
+    assert numbers.pct_short(0.002) == "0.2%"
+
+
+def test_design_numbers_read_the_code():
+    R = numbers.Registry()
+    numbers.design_numbers(R)
+    assert R.d["design.h1_ink_min"]["text"] == "0.5%"
+    assert R.d["design.no_ink_max"]["text"] == "0.05%"
+    assert R.d["design.cal_seeds"]["text"] == "11 and 23"
+    assert R.d["design.report_seed"]["text"] == "37"
+    assert R.d["design.release_gate"]["text"] == "0.90"
+    assert R.d["design.bootstrap_resamples"]["text"] == "10,000"
+    assert R.d["design.a4.level.0.01"]["text"] == "1%"
+    assert R.d["design.naf_comment_min"]["text"] == "1%"
+    assert R.d["design.ci_level"]["text"] == "95%"
+
+
+def test_census_quote_numbers_every_pattern_matches_and_a_miss_fails():
+    R = numbers.Registry()
+    numbers.census_quote_numbers(R)
+    assert len([k for k in R.d if k.startswith("census.q.")]) == len(numbers.CENSUS_QUOTE_NUMBERS)
+    assert R.d["census.q.blazonry-01-rejected-marks-pass-gate.pass"]["text"] == "13"
+    assert R.d["census.q.dsh-internals-01-existence-only-validator.found"]["text"] == "44"
+    sheet = [{"episode_id": e, "self_generated_claim": "", "independent_finding": ""}
+             for e, _s, _n, _p in numbers.CENSUS_QUOTE_NUMBERS]
+    with pytest.raises(SystemExit):
+        numbers.census_quote_numbers(numbers.Registry(), sheet=sheet)
+
+
+def test_disclosure_counts_match_the_plan_commands():
+    import subprocess
+    R = numbers.Registry()
+    numbers.disclosure_numbers(R)
+    if "disclosure.dp.commits" not in R.d:
+        pytest.skip("dossier-preflight has no tag v0.2.0")
+    log = subprocess.run(["git", "-C", data.DP, "log", "v0.2.0",
+                          "--format=%(trailers:key=Co-Authored-By,valueonly)"],
+                         capture_output=True, text=True, check=True).stdout
+    assert R.d["disclosure.dp.claude_commits"]["value"] == log.count("Claude")
+    assert 0 < R.d["disclosure.dp.claude_commits"]["value"] <= R.d["disclosure.dp.commits"]["value"]

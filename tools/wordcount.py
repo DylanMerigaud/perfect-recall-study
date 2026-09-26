@@ -15,6 +15,8 @@ otherwise of the first paragraph following the document's title (its first "# " 
 
 Reference count: the number of "[n]" entries in the "## References" section.
 
+HTML comments (<!-- ... -->) are removed before any count: the rendered page does not show them.
+
 Prints all three counts (each against its limit) and exits 1 if any of them is exceeded, 0
 otherwise.
 """
@@ -42,7 +44,7 @@ def _body_text(text):
 
 def body_word_count(text):
     """Return (total_words, caption_count)."""
-    body = _body_text(text)
+    body = _body_text(_mdutil.strip_comments(text))
     words = 0
     captions = 0
     for line in body.splitlines():
@@ -73,6 +75,7 @@ def _first_paragraph_after_title(text):
 
 
 def abstract_word_count(text):
+    text = _mdutil.strip_comments(text)
     abstract = _mdutil.section_body(text, "Abstract")
     if abstract is None:
         abstract = _first_paragraph_after_title(text)
@@ -80,6 +83,7 @@ def abstract_word_count(text):
 
 
 def reference_count(text):
+    text = _mdutil.strip_comments(text)
     refs_body = _mdutil.section_body(text, "References")
     if refs_body is None:
         return 0

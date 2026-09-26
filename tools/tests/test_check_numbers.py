@@ -100,3 +100,19 @@ def test_offending_line_reported_once_even_with_two_stray_digits(tmp_path, capsy
 def test_wrong_arg_count_fails(capsys):
     rc = check_numbers.main(["check_numbers.py"])
     assert rc == 1
+
+
+def test_digits_inside_an_html_comment_are_exempt(tmp_path):
+    text = (
+        "Prose with no numbers.\n"
+        "<!-- PENDING-CODER2: kappa 0.81 on 14 episodes,\n"
+        "a second line with 42 in it -->\n"
+        "More prose.\n"
+    )
+    assert run(text, tmp_path) == 0
+
+
+def test_digits_after_a_closed_comment_are_still_caught(tmp_path, capsys):
+    text = "<!-- slot 1 -->\nThe tool passed 68 tests.\n"
+    assert run(text, tmp_path) == 1
+    assert "68 tests" in capsys.readouterr().out

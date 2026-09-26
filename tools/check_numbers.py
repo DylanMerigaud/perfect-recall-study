@@ -10,6 +10,7 @@ never went through the registry, which is exactly what this check catches.
 Exempted from the check:
 - text inside a {{key}} placeholder;
 - inline code (`single backtick spans`) and fenced code blocks (```triple backtick blocks```);
+- HTML comments (<!-- ... -->), which the rendered page does not show;
 - the "References" and "About the author" sections, in full;
 - any span matching a pattern in number_allowlist.txt, next to this script (years, form names
   like W-9, section and hypothesis labels like H3 or RQ1, version numbers, commit hashes, and
@@ -52,7 +53,7 @@ def _mark(mask, match):
 
 def excluded_mask(text, allowlist):
     mask = [False] * len(text)
-    for pattern in (FENCED_CODE_RE, INLINE_CODE_RE, PLACEHOLDER_RE):
+    for pattern in (_mdutil.COMMENT_RE, FENCED_CODE_RE, INLINE_CODE_RE, PLACEHOLDER_RE):
         for m in pattern.finditer(text):
             _mark(mask, m)
     for pattern in allowlist:

@@ -252,6 +252,8 @@ def check_entry(number, manuscript_citation, entry, opener=None):
 def check(manuscript_text, refs_entries, opener=None):
     opener = opener or _default_opener
     errors = []
+    # HTML comments are not shown in the rendered page: a citation inside one is not a citation.
+    manuscript_text = _mdutil.strip_comments(manuscript_text)
 
     cited_order = body_citation_order(manuscript_text)
     expected_order = list(range(1, len(cited_order) + 1))

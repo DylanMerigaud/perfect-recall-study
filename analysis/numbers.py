@@ -654,6 +654,140 @@ def shipped_failure_numbers(R):
                               "the stored per-shape count")
 
 
+# ------------------------------------------------------------------------------------------
+# Design constants the manuscript quotes (criteria, seeds, gates), read from the code that
+# applies them, never retyped
+# ------------------------------------------------------------------------------------------
+
+def pct_short(v, digits=2):
+    """0.005 -> '0.5%', 0.01 -> '1%', 0.0005 -> '0.05%'."""
+    t = f"{100 * v:.{digits}f}".rstrip("0").rstrip(".")
+    return t + "%"
+
+
+def _module_constants(relpath, names):
+    path = os.path.join(data.STUDY, relpath)
+    return constants(open(path, encoding="utf-8").read(), names)
+
+
+def design_numbers(R):
+    h = _module_constants("analysis/hypotheses.py",
+                          {"H1_INK_MIN", "H6_NO_INK_MAX", "H3_MARK_MIN", "FAIL_BELOW", "H1_BELOW",
+                           "FALSE_ALARM_ABOVE"})
+    src = "analysis/hypotheses.py"
+    R.put("design.h1_ink_min", h["H1_INK_MIN"], pct_short(h["H1_INK_MIN"]), src,
+          "H1: minimum Augraphy ink share in the emptied field (PREREG 4.1)")
+    R.put("design.no_ink_max", h["H6_NO_INK_MAX"], pct_short(h["H6_NO_INK_MAX"]), src,
+          "upper ink share of the 'no ink' required_field pages (PREREG 4.1)")
+    R.put("design.h3_mark_min", h["H3_MARK_MIN"], pct_short(h["H3_MARK_MIN"]), src,
+          "H3: minimum hand-mark share of the field")
+    R.put("design.fail_below", h["FAIL_BELOW"], f"{h['FAIL_BELOW']:.2f}", src,
+          "recall below which a (check, source) cell counts as failing (H6)")
+    R.put("design.h1_below", h["H1_BELOW"], f"{h['H1_BELOW']:.2f}", src,
+          "H1 criterion: recall below this value")
+    R.put("design.h2_false_alarm_max", h["FALSE_ALARM_ABOVE"], f"{h['FALSE_ALARM_ABOVE']:.2f}",
+          src, "H2 criterion: per-dossier false-alarm rate at most this value")
+    p = _module_constants("analysis/protocols.py",
+                          {"CAL_SEEDS", "REP_SEED", "IDENTITIES", "BUDGETS", "RELEASE_GATE"})
+    src = "analysis/protocols.py"
+    cal = ast.literal_eval(p["CAL_SEEDS"].split(" in ", 1)[1])
+    rep = int(p["REP_SEED"].split("==", 1)[1])
+    R.put("design.cal_seeds", list(cal), " and ".join(str(s) for s in cal), src,
+          "seeds thresholds are chosen on (P1, P2)")
+    R.put("design.report_seed", rep, str(rep), src, "the held-out report seed")
+    R.put("design.identities", len(p["IDENTITIES"]), count(len(p["IDENTITIES"])), src,
+          "fictional identities in A1 to A3")
+    R.put("design.release_gate", p["RELEASE_GATE"], f"{p['RELEASE_GATE']:.2f}", src,
+          "recall a release gate requires on the protocol's own report set")
+    b = p["BUDGETS"]
+    R.put("design.budgets", list(b), " and ".join(pct_short(x) for x in b), src,
+          "false-positive budgets of the sensitivity analysis")
+    s = _module_constants("analysis/stats.py", {"N_RESAMPLES", "Z95"})
+    level = math.erf(s["Z95"] / math.sqrt(2))
+    R.put("design.ci_level", round(level, 4), pct_short(round(level, 4), 0),
+          "analysis/stats.py", "confidence level of every interval, from the z value Z95")
+    R.put("design.bootstrap_resamples", s["N_RESAMPLES"], count(s["N_RESAMPLES"]),
+          "analysis/stats.py", "cluster bootstrap resamples")
+    a = _module_constants("analysis/a4.py", {"LEVELS"})
+    for lv in a["LEVELS"]:
+        R.put(f"design.a4.level.{lv:g}", lv, pct_short(lv), "analysis/a4.py",
+              "a nominal ink level of the targeted run, as a share of the field")
+    n = _module_constants("naf/human_label.py", {"THRESHOLD"})
+    R.put("design.naf_comment_min", n["THRESHOLD"], pct_short(n["THRESHOLD"]),
+          "naf/human_label.py", "share of a blank field a NAF comment polygon must cover")
+    pop = list(csv.DictReader(open(os.path.join(data.STUDY, "census", "population.csv"),
+                                   encoding="utf-8")))
+    exc = sum(1 for r in pop if r["include"].strip().lower() != "true")
+    R.put("census.excluded", exc, count(exc), "census/population.csv", "repos excluded")
+
+
+# (episode, side, name, regex): the numbers of Table 2, captured from the quote at the pinned
+# commit (census/sheet.csv) so that no census figure is retyped. Every pattern must match.
+CENSUS_QUOTE_NUMBERS = (
+    ("airlock-01-status-hides-brand-miss", "claim", "gate", r"\((\d+ of \d+)\)"),
+    ("airlock-01-status-hides-brand-miss", "finding", "brand",
+     r"Brand named: \d+% \((\d+ of \d+)\)"),
+    ("fintech-roast-01-field-run", "claim", "recall", r"Recall \| (\d+ / \d+)"),
+    ("fintech-roast-01-field-run", "claim", "precision", r"\| (\d+ / \d+) = \*\*100%"),
+    ("fintech-roast-01-field-run", "finding", "emitted", r"auditors \| (\d+) \|"),
+    ("fintech-roast-01-field-run", "finding", "refuted", r"reporting \| (\d+) \|"),
+    ("trimwrit-01-dead-graders", "claim", "resisted", r"reported (\d+ of \d+)"),
+    ("trimwrit-02-contaminated-baseline", "finding", "with", r"scores (\d\.\d\d) with the rule"),
+    ("trimwrit-02-contaminated-baseline", "finding", "without", r"and (\d\.\d\d) without"),
+    ("blazonry-01-rejected-marks-pass-gate", "claim", "tests", r"# (\d+) tests"),
+    ("blazonry-01-rejected-marks-pass-gate", "finding", "pass", r"(\d+) of the \d+ marks"),
+    ("blazonry-01-rejected-marks-pass-gate", "finding", "rejected", r"\d+ of the (\d+) marks"),
+    ("bankfile-01-reversed-credit", "claim", "tests", r"(\d+) tests,"),
+    ("bankfile-01-reversed-credit", "claim", "coverage", r"(\d+%) coverage"),
+    ("bankfile-01-reversed-credit", "finding", "statements", r"(\d+) real statement files"),
+    ("bankfile-02-spec-found-field-bug", "finding", "transactions", r"(\d+) transactions across"),
+    ("bankfile-02-spec-found-field-bug", "finding", "files", r"across (\d+) files"),
+    ("nameproof-01-six-wrong-answers", "claim", "from", r"Suite: (\d+) to"),
+    ("nameproof-01-six-wrong-answers", "claim", "to", r"to \*\*(\d+)\*\*"),
+    ("nameproof-02-doctor-agrees", "finding", "agreed", r"(\d+) agreed"),
+    ("nameproof-02-doctor-agrees", "finding", "disagreed", r"(\d+) disagreed"),
+    ("dsh-internals-01-existence-only-validator", "claim", "valid", r"(\d+) valid,"),
+    ("dsh-internals-01-existence-only-validator", "claim", "invalid", r"(\d+) invalid"),
+    ("dsh-internals-01-existence-only-validator", "finding", "found", r"is (\d+) types"),
+    ("dsh-internals-01-existence-only-validator", "finding", "claimed", r"not (\d+)\."),
+)
+
+
+def census_quote_numbers(R, sheet=None):
+    import re
+    if sheet is None:
+        sheet = list(csv.DictReader(open(os.path.join(data.STUDY, "census", "sheet.csv"),
+                                         encoding="utf-8")))
+    by_id = {r["episode_id"]: r for r in sheet}
+    column = {"claim": "self_generated_claim", "finding": "independent_finding"}
+    for episode, side, name, pattern in CENSUS_QUOTE_NUMBERS:
+        quote = by_id[episode][column[side]]
+        m = re.search(pattern, quote)
+        if m is None:
+            raise SystemExit(f"census quote pattern {pattern!r} does not match {episode} {side}")
+        R.put(f"census.q.{episode}.{name}", m.group(1), m.group(1), "census/sheet.csv",
+              f"captured from the quoted {side} by {pattern!r}")
+
+
+def disclosure_numbers(R, tag="v0.2.0"):
+    """Commit counts the AI disclosure quotes: commits of dossier-preflight at the tag, and those
+    carrying a Co-Authored-By trailer that names Claude (plan section 9's two git commands)."""
+    tags = subprocess.run(["git", "-C", data.DP, "tag", "-l", tag], capture_output=True,
+                          text=True, check=True).stdout.split()
+    if not tags:
+        return
+    src = f"dossier-preflight@{tag}"
+    total = int(subprocess.run(["git", "-C", data.DP, "rev-list", "--count", tag],
+                               capture_output=True, text=True, check=True).stdout)
+    trailers = subprocess.run(["git", "-C", data.DP, "log", tag,
+                               "--format=%(trailers:key=Co-Authored-By,valueonly)"],
+                              capture_output=True, text=True, check=True).stdout
+    claude = sum(1 for line in trailers.splitlines() if "Claude" in line)
+    R.put("disclosure.dp.commits", total, count(total), src, "git rev-list --count " + tag)
+    R.put("disclosure.dp.claude_commits", claude, count(claude), src,
+          "Co-Authored-By trailer lines naming Claude, as grep -c counts them")
+
+
 def build():
     R = Registry()
     H = json.load(open(os.path.join(data.RESULTS, "hypotheses.json"), encoding="utf-8"))
@@ -671,6 +805,9 @@ def build():
     naf_numbers(R)
     prereg_numbers(R)
     shipped_failure_numbers(R)
+    design_numbers(R)
+    census_quote_numbers(R)
+    disclosure_numbers(R)
     return R.d
 
 

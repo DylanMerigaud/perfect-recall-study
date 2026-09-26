@@ -179,3 +179,20 @@ def test_wrong_manuscript_path_raises(tmp_path):
 
     with pytest.raises(FileNotFoundError):
         wordcount.main(["wordcount.py", str(tmp_path / "missing.md")])
+
+
+def test_html_comments_are_not_counted(tmp_path):
+    text = (
+        "# Title\n\n## Abstract\n\nFour words of abstract.\n"
+        "<!-- ten words hidden in the abstract that must never be counted -->\n\n"
+        "## Body\n\nThree body words.\n\n"
+        "<!-- PENDING-X2\n\n" + " ".join(["hidden"] * 500) + "\n\n-->\n\n"
+        "## References\n\n[1] X.\n<!-- [2] Y. -->\n"
+    )
+    body_words, captions = wordcount.body_word_count(text)
+    expected = sum(len(s.split()) for s in
+                   ("# Title", "## Abstract", "Four words of abstract.", "## Body",
+                    "Three body words."))
+    assert (body_words, captions) == (expected, 0)
+    assert wordcount.abstract_word_count(text) == 4
+    assert wordcount.reference_count(text) == 1

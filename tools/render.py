@@ -13,6 +13,10 @@ Exits 1 and writes nothing to OUT if:
 - a "{{" or "}}" is left in the rendered text (a malformed or unresolved placeholder, for
   example nested braces).
 
+Text inside HTML comments (<!-- ... -->) is left exactly as written: no substitution, no
+brace check. A comment holds text that is not true yet (a paragraph waiting for results whose
+keys do not exist yet), and the rendered page does not show it.
+
 Every problem is printed on its own line before exiting.
 """
 import json
@@ -21,6 +25,7 @@ import sys
 from pathlib import Path
 
 PLACEHOLDER_RE = re.compile(r"\{\{([^{}]*)\}\}")
+COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
 
 
 def render(src_text, numbers):
@@ -38,10 +43,18 @@ def render(src_text, numbers):
             return match.group(0)
         return str(entry["text"])
 
-    rendered = PLACEHOLDER_RE.sub(replace, src_text)
+    pieces = []
+    last = 0
+    for m in COMMENT_RE.finditer(src_text):
+        pieces.append(PLACEHOLDER_RE.sub(replace, src_text[last:m.start()]))
+        pieces.append(m.group(0))
+        last = m.end()
+    pieces.append(PLACEHOLDER_RE.sub(replace, src_text[last:]))
+    rendered = "".join(pieces)
 
-    if "{{" in rendered or "}}" in rendered:
-        for line_no, line in enumerate(rendered.splitlines(), start=1):
+    visible = COMMENT_RE.sub(lambda m: "\n" * m.group(0).count("\n"), rendered)
+    if "{{" in visible or "}}" in visible:
+        for line_no, line in enumerate(visible.splitlines(), start=1):
             if "{{" in line or "}}" in line:
                 errors.append("leftover brace on line %d: %s" % (line_no, line.strip()))
 

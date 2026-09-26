@@ -348,3 +348,11 @@ def test_refs_jsonl_with_invalid_json_line_fails(tmp_path, capsys):
     assert rc == 1
     captured = capsys.readouterr()
     assert "not valid JSON" in captured.err
+
+
+def test_citation_inside_an_html_comment_is_ignored():
+    manuscript = MANUSCRIPT.replace(
+        "tooling [3].", "tooling [3]. <!-- a slot citing [4], not shown -->"
+    )
+    errors = check_refs.check(manuscript, make_refs_entries(), opener=default_opener())
+    assert errors == []

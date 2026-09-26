@@ -3536,6 +3536,12 @@
     "text": "8",
     "value": 8
   },
+  "census.excluded": {
+    "how": "repos excluded",
+    "source": "census/population.csv",
+    "text": "7",
+    "value": 7
+  },
   "census.fintech-roast-01-field-run.claim_text": {
     "how": "the self-generated claim, quoted at the pinned commit",
     "source": "census/sheet.csv",
@@ -3601,6 +3607,156 @@
     "source": "census/population.csv",
     "text": "15",
     "value": 15
+  },
+  "census.q.airlock-01-status-hides-brand-miss.brand": {
+    "how": "captured from the quoted finding by 'Brand named: \\\\d+% \\\\((\\\\d+ of \\\\d+)\\\\)'",
+    "source": "census/sheet.csv",
+    "text": "4 of 10",
+    "value": "4 of 10"
+  },
+  "census.q.airlock-01-status-hides-brand-miss.gate": {
+    "how": "captured from the quoted claim by '\\\\((\\\\d+ of \\\\d+)\\\\)'",
+    "source": "census/sheet.csv",
+    "text": "10 of 10",
+    "value": "10 of 10"
+  },
+  "census.q.bankfile-01-reversed-credit.coverage": {
+    "how": "captured from the quoted claim by '(\\\\d+%) coverage'",
+    "source": "census/sheet.csv",
+    "text": "98%",
+    "value": "98%"
+  },
+  "census.q.bankfile-01-reversed-credit.statements": {
+    "how": "captured from the quoted finding by '(\\\\d+) real statement files'",
+    "source": "census/sheet.csv",
+    "text": "54",
+    "value": "54"
+  },
+  "census.q.bankfile-01-reversed-credit.tests": {
+    "how": "captured from the quoted claim by '(\\\\d+) tests,'",
+    "source": "census/sheet.csv",
+    "text": "551",
+    "value": "551"
+  },
+  "census.q.bankfile-02-spec-found-field-bug.files": {
+    "how": "captured from the quoted finding by 'across (\\\\d+) files'",
+    "source": "census/sheet.csv",
+    "text": "5",
+    "value": "5"
+  },
+  "census.q.bankfile-02-spec-found-field-bug.transactions": {
+    "how": "captured from the quoted finding by '(\\\\d+) transactions across'",
+    "source": "census/sheet.csv",
+    "text": "59",
+    "value": "59"
+  },
+  "census.q.blazonry-01-rejected-marks-pass-gate.pass": {
+    "how": "captured from the quoted finding by '(\\\\d+) of the \\\\d+ marks'",
+    "source": "census/sheet.csv",
+    "text": "13",
+    "value": "13"
+  },
+  "census.q.blazonry-01-rejected-marks-pass-gate.rejected": {
+    "how": "captured from the quoted finding by '\\\\d+ of the (\\\\d+) marks'",
+    "source": "census/sheet.csv",
+    "text": "14",
+    "value": "14"
+  },
+  "census.q.blazonry-01-rejected-marks-pass-gate.tests": {
+    "how": "captured from the quoted claim by '# (\\\\d+) tests'",
+    "source": "census/sheet.csv",
+    "text": "59",
+    "value": "59"
+  },
+  "census.q.dsh-internals-01-existence-only-validator.claimed": {
+    "how": "captured from the quoted finding by 'not (\\\\d+)\\\\.'",
+    "source": "census/sheet.csv",
+    "text": "45",
+    "value": "45"
+  },
+  "census.q.dsh-internals-01-existence-only-validator.found": {
+    "how": "captured from the quoted finding by 'is (\\\\d+) types'",
+    "source": "census/sheet.csv",
+    "text": "44",
+    "value": "44"
+  },
+  "census.q.dsh-internals-01-existence-only-validator.invalid": {
+    "how": "captured from the quoted claim by '(\\\\d+) invalid'",
+    "source": "census/sheet.csv",
+    "text": "0",
+    "value": "0"
+  },
+  "census.q.dsh-internals-01-existence-only-validator.valid": {
+    "how": "captured from the quoted claim by '(\\\\d+) valid,'",
+    "source": "census/sheet.csv",
+    "text": "270",
+    "value": "270"
+  },
+  "census.q.fintech-roast-01-field-run.emitted": {
+    "how": "captured from the quoted finding by 'auditors \\\\| (\\\\d+) \\\\|'",
+    "source": "census/sheet.csv",
+    "text": "16",
+    "value": "16"
+  },
+  "census.q.fintech-roast-01-field-run.precision": {
+    "how": "captured from the quoted claim by '\\\\| (\\\\d+ / \\\\d+) = \\\\*\\\\*100%'",
+    "source": "census/sheet.csv",
+    "text": "53 / 53",
+    "value": "53 / 53"
+  },
+  "census.q.fintech-roast-01-field-run.recall": {
+    "how": "captured from the quoted claim by 'Recall \\\\| (\\\\d+ / \\\\d+)'",
+    "source": "census/sheet.csv",
+    "text": "30 / 35",
+    "value": "30 / 35"
+  },
+  "census.q.fintech-roast-01-field-run.refuted": {
+    "how": "captured from the quoted finding by 'reporting \\\\| (\\\\d+) \\\\|'",
+    "source": "census/sheet.csv",
+    "text": "10",
+    "value": "10"
+  },
+  "census.q.nameproof-01-six-wrong-answers.from": {
+    "how": "captured from the quoted claim by 'Suite: (\\\\d+) to'",
+    "source": "census/sheet.csv",
+    "text": "93",
+    "value": "93"
+  },
+  "census.q.nameproof-01-six-wrong-answers.to": {
+    "how": "captured from the quoted claim by 'to \\\\*\\\\*(\\\\d+)\\\\*\\\\*'",
+    "source": "census/sheet.csv",
+    "text": "109",
+    "value": "109"
+  },
+  "census.q.nameproof-02-doctor-agrees.agreed": {
+    "how": "captured from the quoted finding by '(\\\\d+) agreed'",
+    "source": "census/sheet.csv",
+    "text": "12",
+    "value": "12"
+  },
+  "census.q.nameproof-02-doctor-agrees.disagreed": {
+    "how": "captured from the quoted finding by '(\\\\d+) disagreed'",
+    "source": "census/sheet.csv",
+    "text": "0",
+    "value": "0"
+  },
+  "census.q.trimwrit-01-dead-graders.resisted": {
+    "how": "captured from the quoted claim by 'reported (\\\\d+ of \\\\d+)'",
+    "source": "census/sheet.csv",
+    "text": "32 of 32",
+    "value": "32 of 32"
+  },
+  "census.q.trimwrit-02-contaminated-baseline.with": {
+    "how": "captured from the quoted finding by 'scores (\\\\d\\\\.\\\\d\\\\d) with the rule'",
+    "source": "census/sheet.csv",
+    "text": "1.00",
+    "value": "1.00"
+  },
+  "census.q.trimwrit-02-contaminated-baseline.without": {
+    "how": "captured from the quoted finding by 'and (\\\\d\\\\.\\\\d\\\\d) without'",
+    "source": "census/sheet.csv",
+    "text": "0.00",
+    "value": "0.00"
   },
   "census.resolved.M0": {
     "how": "first codes (coder 1 only, single coder, before agreement)",
@@ -3920,6 +4076,132 @@
     "source": "census/sheet.csv",
     "text": "an llm judge that failed four runs out of four (README.md:140)",
     "value": "an llm judge that failed four runs out of four (README.md:140)"
+  },
+  "design.a4.level.0": {
+    "how": "a nominal ink level of the targeted run, as a share of the field",
+    "source": "analysis/a4.py",
+    "text": "0%",
+    "value": 0.0
+  },
+  "design.a4.level.0.002": {
+    "how": "a nominal ink level of the targeted run, as a share of the field",
+    "source": "analysis/a4.py",
+    "text": "0.2%",
+    "value": 0.002
+  },
+  "design.a4.level.0.01": {
+    "how": "a nominal ink level of the targeted run, as a share of the field",
+    "source": "analysis/a4.py",
+    "text": "1%",
+    "value": 0.01
+  },
+  "design.a4.level.0.04": {
+    "how": "a nominal ink level of the targeted run, as a share of the field",
+    "source": "analysis/a4.py",
+    "text": "4%",
+    "value": 0.04
+  },
+  "design.bootstrap_resamples": {
+    "how": "cluster bootstrap resamples",
+    "source": "analysis/stats.py",
+    "text": "10,000",
+    "value": 10000
+  },
+  "design.budgets": {
+    "how": "false-positive budgets of the sensitivity analysis",
+    "source": "analysis/protocols.py",
+    "text": "0.1% and 0.5%",
+    "value": [
+      0.001,
+      0.005
+    ]
+  },
+  "design.cal_seeds": {
+    "how": "seeds thresholds are chosen on (P1, P2)",
+    "source": "analysis/protocols.py",
+    "text": "11 and 23",
+    "value": [
+      11,
+      23
+    ]
+  },
+  "design.ci_level": {
+    "how": "confidence level of every interval, from the z value Z95",
+    "source": "analysis/stats.py",
+    "text": "95%",
+    "value": 0.95
+  },
+  "design.fail_below": {
+    "how": "recall below which a (check, source) cell counts as failing (H6)",
+    "source": "analysis/hypotheses.py",
+    "text": "0.90",
+    "value": 0.9
+  },
+  "design.h1_below": {
+    "how": "H1 criterion: recall below this value",
+    "source": "analysis/hypotheses.py",
+    "text": "0.50",
+    "value": 0.5
+  },
+  "design.h1_ink_min": {
+    "how": "H1: minimum Augraphy ink share in the emptied field (PREREG 4.1)",
+    "source": "analysis/hypotheses.py",
+    "text": "0.5%",
+    "value": 0.005
+  },
+  "design.h2_false_alarm_max": {
+    "how": "H2 criterion: per-dossier false-alarm rate at most this value",
+    "source": "analysis/hypotheses.py",
+    "text": "0.10",
+    "value": 0.1
+  },
+  "design.h3_mark_min": {
+    "how": "H3: minimum hand-mark share of the field",
+    "source": "analysis/hypotheses.py",
+    "text": "1%",
+    "value": 0.01
+  },
+  "design.identities": {
+    "how": "fictional identities in A1 to A3",
+    "source": "analysis/protocols.py",
+    "text": "6",
+    "value": 6
+  },
+  "design.naf_comment_min": {
+    "how": "share of a blank field a NAF comment polygon must cover",
+    "source": "naf/human_label.py",
+    "text": "1%",
+    "value": 0.01
+  },
+  "design.no_ink_max": {
+    "how": "upper ink share of the 'no ink' required_field pages (PREREG 4.1)",
+    "source": "analysis/hypotheses.py",
+    "text": "0.05%",
+    "value": 0.0005
+  },
+  "design.release_gate": {
+    "how": "recall a release gate requires on the protocol's own report set",
+    "source": "analysis/protocols.py",
+    "text": "0.90",
+    "value": 0.9
+  },
+  "design.report_seed": {
+    "how": "the held-out report seed",
+    "source": "analysis/protocols.py",
+    "text": "37",
+    "value": 37
+  },
+  "disclosure.dp.claude_commits": {
+    "how": "Co-Authored-By trailer lines naming Claude, as grep -c counts them",
+    "source": "dossier-preflight@v0.2.0",
+    "text": "25",
+    "value": 25
+  },
+  "disclosure.dp.commits": {
+    "how": "git rev-list --count v0.2.0",
+    "source": "dossier-preflight@v0.2.0",
+    "text": "34",
+    "value": 34
   },
   "explore.h1_product.abstained": {
     "how": "H1 pages the product refuses to judge (abstention on)",

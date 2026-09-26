@@ -80,3 +80,31 @@ def test_wrong_arg_count_fails(capsys):
     assert rc == 1
     captured = capsys.readouterr()
     assert "usage" in captured.err
+
+
+def test_comments_are_left_untouched_and_not_brace_checked(tmp_path):
+    src = tmp_path / "manuscript.src.md"
+    text = (
+        "Recall was {{h1.recall}}.\n"
+        "<!-- PENDING-X2\nH2 recall {{h2.recall}} (key does not exist yet) -->\n"
+        "End.\n"
+    )
+    src.write_text(text, encoding="utf-8")
+    numbers = tmp_path / "numbers.json"
+    numbers.write_text(json.dumps({"h1.recall": {"text": "0.396"}}), encoding="utf-8")
+    out = tmp_path / "manuscript.md"
+
+    rc = render.main(["render.py", str(src), str(numbers), str(out)])
+
+    assert rc == 0
+    assert out.read_text(encoding="utf-8") == text.replace("{{h1.recall}}", "0.396")
+
+
+def test_unknown_key_outside_a_comment_still_fails(tmp_path):
+    src = tmp_path / "manuscript.src.md"
+    src.write_text("<!-- {{fine}} -->\nBad {{missing}}.\n", encoding="utf-8")
+    numbers = tmp_path / "numbers.json"
+    numbers.write_text("{}", encoding="utf-8")
+    out = tmp_path / "manuscript.md"
+    assert render.main(["render.py", str(src), str(numbers), str(out)]) == 1
+    assert not out.exists()
