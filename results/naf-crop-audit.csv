@@ -1,0 +1,19 @@
+group,image_id,field_id,share,sample,label,reading
+132,007540939_00045,f46,0.567,no_comment,residue,"the consensus is mostly black here, the red covers paper texture and the dotted line"
+132,007540939_00398,f53,0.149,no_comment,residue,dotted line and paper noise
+131,100660788_00363,f58,0.093,no_comment,real_mixed,real (ditto marks) plus the whole dotted line as residue
+131,100651536_00022,f59,0.078,no_comment,residue,"the dotted line, absent from the consensus"
+132,007540939_00045,f54,0.069,no_comment,residue,dotted line and paper noise
+132,007540939_00126,f51,0.058,no_comment,residue,dotted line
+131,101023529_00047,f50,0.056,no_comment,residue,dotted line
+132,007540939_00111,f56,0.042,no_comment,real_mixed,real (signature strokes entering the field) plus dotted-line residue
+106,007675709_00058,f4,0.022,no_comment,residue,dotted line
+106,007675709_00027,f4,0.024,no_comment,residue,dotted line
+131,100651536_00024,f57,0.021,no_comment,residue,"dotted line, partly"
+1,007182398_00121,f30,0.006,no_comment,real_mixed,"real (a pen stroke from the label above; this is the group's medoid)"
+131,100651536_00020,f25,0.005,no_comment,real_mixed,real (handwriting from the row above dropping into a blank table row) plus the printed row number
+106,007675709_00062,f1,0.007,no_comment,residue,dotted line
+131,101023529_00081,f70,,comment,real,handwritten strokes
+132,007540939_00398,f51,,comment,real,"a handwritten ""227"""
+131,100651536_00022,f28,,comment,real_mixed,"a signature stroke and an ink blot, real, plus the printed row number"
+132,007540939_00183,f47,,comment,specks,specks only

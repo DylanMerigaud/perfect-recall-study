@@ -42,6 +42,8 @@ RESULTS = os.path.join(STUDY, "results")
 # The thresholds "as shipped" (PREREG.md section 2): thresholds.json of dossier-preflight, whose
 # sha256 the preregistration records. Any other file is refused.
 SHIPPED_SHA256 = "184351f68dacc89118f22efce0a052f6b596e07b7a24f93b0bdfdf1a7e4fe4a5"
+# The dossier-preflight commit the preregistration fixes that file at.
+PREREG_DP_COMMIT = "2235d50abf39d0b0e952fedd082672d7003f25b9"
 
 ARMS = {
     "A0": ("a0/measurements.jsonl.gz",),
@@ -116,11 +118,29 @@ def dp_commit():
 
 
 def shipped_thresholds_path():
+    """The thresholds.json the preregistration fixes, byte for byte.
+
+    dossier-preflight's working copy is used while it still has that sha256. From v0.2.0 on the
+    file carries more measurements (the failure metric of the all-shapes run, the independent
+    generator's recall) with every threshold value unchanged, so its sha256 moves: the frozen
+    file is then taken from the preregistered commit with `git show` into the cache, and its
+    sha256 is checked the same way. Any other content is refused.
+    """
     p = os.path.join(DP, "thresholds.json")
-    got = sha256(p)
+    if sha256(p) == SHIPPED_SHA256:
+        return p
+    os.makedirs(CACHE, exist_ok=True)
+    out = os.path.join(CACHE, f"thresholds-{SHIPPED_SHA256[:16]}.json")
+    if not os.path.exists(out) or sha256(out) != SHIPPED_SHA256:
+        blob = subprocess.run(["git", "-C", DP, "show", f"{PREREG_DP_COMMIT}:thresholds.json"],
+                              capture_output=True, check=True).stdout
+        with open(out + ".tmp", "wb") as f:
+            f.write(blob)
+        os.replace(out + ".tmp", out)
+    got = sha256(out)
     if got != SHIPPED_SHA256:
-        raise SystemExit(f"{p} has sha256 {got}, the preregistration fixes {SHIPPED_SHA256}")
-    return p
+        raise SystemExit(f"{out} has sha256 {got}, the preregistration fixes {SHIPPED_SHA256}")
+    return out
 
 
 def plain(path):

@@ -371,15 +371,306 @@ def arm_numbers(R, P):
           "X2 on disk")
 
 
+# ------------------------------------------------------------------------------------------
+# Numbers added for the claims map (CLAIMS.md "Numbers to add", T20)
+# ------------------------------------------------------------------------------------------
+
+def a4_numbers(R, tallied=None):
+    """A4 per check, per ink level, pooled and per shape (analysis/a4.py)."""
+    from analysis import a4
+    t = a4.compute() if tallied is None else tallied
+    if t is None:
+        R.put("a4.status", "absent", "absent", "a4/readings.jsonl.gz", "A4 not on disk")
+        return
+    src = "a4/readings.jsonl.gz (analysis/a4.py)"
+    for check, c in sorted(t.items()):
+        for side, name in (("variant", "recall"), ("clean", "false_alarm")):
+            for lv, (k, n) in sorted(c["pooled"].get(side, {}).items()):
+                R.rate(f"a4.{check}.{name}.at_{a4.level_tag(lv)}", k, n, src,
+                       f"shipped {check} at the shipped threshold, abstention off, foreign ink "
+                       f"at level {lv} laid on the damaged zone, every shape pooled "
+                       f"({'damaged' if side == 'variant' else 'clean'} dossier)")
+            for shape, d in sorted(c["by_shape"].items()):
+                for lv, (k, n) in sorted(d.get(side, {}).items()):
+                    R.rate(f"a4.{check}.{name}.{shape}.at_{a4.level_tag(lv)}", k, n, src,
+                           f"as a4.{check}.{name}.at_<level>, {shape} shape only")
+
+
+def dossier_rate(R, prefix, t, source, how):
+    """A per-dossier false-alarm rate stored as (dossier_fpr, n_dossiers): k is recovered."""
+    n = t["n_dossiers"]
+    k = round(t["dossier_fpr"] * n)
+    if abs(k - t["dossier_fpr"] * n) > 1e-6:
+        raise SystemExit(f"{prefix}: dossier_fpr x n_dossiers is not an integer")
+    R.rate(prefix, k, n, source, how)
+
+
+def protocol_extra_numbers(R, P):
+    """Domain per fold, false-alarm cost on A3 and on validation, MAE of dossier false alarms."""
+    src = "results/protocols.json"
+    for pid, p in P["protocols"].items():
+        for f in p["folds"]:
+            if f.get("status") != "run":
+                continue
+            tag = f["fold"].replace("/", ".").replace("=", "_")
+            base = f"protocol.{tag}"
+            att = f.get("domain_attempts") or []
+            R.put(base + ".domain_dpi", f.get("domain"), count(f.get("domain")), src,
+                  "dpi floor the dossier-level domain rule settled on (the validated figures "
+                  "are over dpi at or above it)")
+            R.put(base + ".domain_attempts", att,
+                  ", ".join(f"{d} dpi {f3(r)}" for d, r in att), src,
+                  "complete-dossier recall per candidate dpi floor, in the order tried")
+            fb = bool(att) and all(r == 0 for _, r in att)
+            R.put(base + ".domain_fallback", fb, "yes" if fb else "no", src,
+                  "every candidate floor had complete-dossier recall 0, so the rule fell back")
+            for rule, r in f["rules"].items():
+                rb = f"{base}.{rule}.required_field"
+                if rule.startswith("B3_"):
+                    sets = {"validation": r.get("validation"),
+                            "a3": (r.get("targets") or {}).get("A3_seed37")}
+                else:
+                    rf = r["checks"].get("required_field") or {}
+                    sets = {"validation": rf.get("validation"),
+                            "a3": (rf.get("targets") or {}).get("A3_seed37")}
+                for where, t in sets.items():
+                    if not isinstance(t, dict) or not t.get("n_neg"):
+                        continue
+                    label = "A3 seed 37" if where == "a3" else "the protocol's report set"
+                    R.rate(f"{rb}.{where}_fpr", t["fp"], t["n_neg"], src,
+                           f"{rule}: false alarms per clean required field on {label}", fmt=f3)
+                    if t.get("n_dossiers"):
+                        dossier_rate(R, f"{rb}.{where}_dossier_fpr", t, src,
+                                     f"{rule}: clean dossiers with at least one required_field "
+                                     f"false alarm on {label}")
+                e = r.get("errors_A3_seed37")
+                if e and e.get("mean_dossier_fpr_abs_error") is not None:
+                    R.put(f"{base}.{rule}.mae_dossier_fpr_a3", e["mean_dossier_fpr_abs_error"],
+                          f3(e["mean_dossier_fpr_abs_error"]), src,
+                          "mean over checks of |validated - A3 seed 37 per-dossier false-alarm "
+                          "rate|")
+
+
+def hypotheses_extra_numbers(R, H):
+    src = "results/hypotheses.json"
+    h1 = H["hypotheses"]["H1"]
+    for side, v in sorted(h1.get("exploratory_by_quarter_turn", {}).items()):
+        R.rate(f"h1.recall.{side}", v["k"], v["n"], src,
+               f"exploratory: H1 recall on pages the tool read at the {side.replace('_', ' ')}")
+    for dpi, v in sorted(h1.get("by_dpi", {}).items(), key=lambda kv: int(kv[0])):
+        R.rate(f"h1.recall.by_dpi.{dpi}", v["k"], v["n"], src, f"H1 recall at {dpi} dpi")
+    q = H["exploratory"]["quarter_turns_A3"]
+    for check, m in sorted(q["misses_by_check"].items()):
+        for side in ("right", "wrong"):
+            n = m[f"pos_{side}"]
+            if n:
+                R.rate(f"explore.quarter_turn.{check}.recall_{side}_turn",
+                       n - m[f"miss_{side}"], n, src,
+                       f"exploratory: {check} recall at the shipped thresholds on A3 pages read "
+                       f"at the {side} quarter turn")
+    for dpi, v in sorted(q["by_dpi"].items(), key=lambda kv: int(kv[0])):
+        R.rate(f"explore.quarter_turn.wrong.by_dpi.{dpi}", v["k"], v["n"], src,
+               f"exploratory: A3 pages read at the wrong quarter turn, {dpi} dpi")
+    p = H["hypotheses"]["H6"]["A3_part"]["primary"]
+    for name in ("named", "observed_failing", "hits"):
+        R.put(f"h6.a3.{name}", p[name], ", ".join(p[name]), src,
+              f"H6 A3 part, primary scoring: {name.replace('_', ' ')} (checks, in order)")
+
+
+def naf_numbers(R):
+    src = "results/naf.json"
+    pn = json.load(open(os.path.join(data.RESULTS, "naf.json"), encoding="utf-8"))["p_naf"]
+    pix = os.path.join(data.AR, "x3", "naf_fields_pixel.csv")
+    rows = list(csv.DictReader(open(pix, encoding="utf-8")))
+    k = sum(r["above_0.345pct"] == "True" for r in rows)
+    if abs(k / len(rows) - pn["share"]) > 1e-12:
+        raise SystemExit("naf_fields_pixel.csv disagrees with results/naf.json p_naf.share")
+    s = "x3/naf_fields_pixel.csv (= results/naf.json p_naf)"
+    R.put("pnaf.pixel_share.k", k, count(k), s, "numerator of pnaf.pixel_share")
+    R.put("pnaf.pixel_share.n", len(rows), count(len(rows)), s, "denominator of pnaf.pixel_share")
+    w = pn["wilson_95"]
+    R.put("pnaf.pixel_share.ci", [w["lower"], w["upper"]],
+          ci(w["lower"], w["upper"], fmt=lambda v: pct(v, 1)), src, "Wilson 95% as stored")
+    med = [r for r in rows if r["image_id"] == r["medoid_id"]]
+    mk = sum(r["above_0.345pct"] == "True" for r in med)
+    R.put("pnaf.audit.medoid_positive", [mk, len(med)], f"{mk} of {len(med)}",
+          "x3/naf_fields_pixel.csv", "medoid fields (registered against themselves) the pixel "
+          "measure still calls positive")
+    audit = list(csv.DictReader(open(os.path.join(data.RESULTS, "naf-crop-audit.csv"),
+                                     encoding="utf-8")))
+    nc = [r for r in audit if r["sample"] == "no_comment"]
+    for label, key in (("residue", "residue_only"), ("real_mixed", "real_mixed")):
+        n = sum(r["label"] == label for r in nc)
+        R.put(f"pnaf.audit.{key}", [n, len(nc)], f"{n} of {len(nc)}",
+              "results/naf-crop-audit.csv", f"crop audit read by eye, no-comment fields: {label}")
+    var = list(csv.DictReader(open(os.path.join(data.RESULTS, "naf-variants.csv"),
+                                   encoding="utf-8")))
+    variants = {"no_dilation": ("0", "False"), "dilation_3": ("3", "False"),
+                "dilation_3_loo": ("3", "True"), "dilation_6": ("6", "False")}
+    for tname, t in (("0.345pct", 0.00345), ("1pct", 0.01), ("4pct", 0.04)):
+        for vname, (rad, loo) in variants.items():
+            sub = [r for r in var if r["radius"] == rad and r["loo"] == loo]
+            n = sum(float(r["share"]) >= t for r in sub)
+            R.put(f"pnaf.sensitivity.{vname}.{tname}", [n, len(sub)], f"{n} of {len(sub)}",
+                  "results/naf-variants.csv (naf/diagnostics/crop_audit.py)",
+                  f"fields at or above {tname} added ink, consensus variant {vname}")
+        sub = [r for r in var if r["radius"] == "3" and r["loo"] == "False"]
+        n = sum((int(r["added"]) - int(r["near8"])) / int(r["area"]) >= t for r in sub)
+        R.put(f"pnaf.sensitivity.far8.{tname}", [n, len(sub)], f"{n} of {len(sub)}",
+              "results/naf-variants.csv (naf/diagnostics/crop_audit.py)",
+              f"fields at or above {tname}, 3 px consensus, counting only added ink more than "
+              "8 px from any template ink")
+
+
+def arm_reading_numbers(R):
+    for arm, want in sorted(data.DECLARED_LINES.items()):
+        path = data.arm_path(arm)
+        if path is None:
+            continue
+        n = data.count_lines(path)
+        errors = path + ".errors.jsonl"
+        e = data.count_lines(errors) if os.path.exists(errors) else 0
+        if n + e != want:
+            raise SystemExit(f"{arm}: {n} lines + {e} errors, the preregistration declares {want}")
+        R.put(f"arm.{arm}.readings", n, count(n), os.path.relpath(path, data.AR),
+              "non-empty lines of the arm file (read errors excluded), asserted to add up with "
+              "the error file to the declared size")
+
+
+def prereg_numbers(R):
+    from analysis import hypotheses
+    audit = hypotheses.read_audit()
+    src = "prereg/coverage-audit.csv"
+    R.put("prereg.audit.rows", len(audit), count(len(audit)), src, "rows")
+    below = sum(r["predicted_below_0.90_on"].strip() != "none" for r in audit)
+    R.put("prereg.audit.below_090", below, count(below), src,
+          "rows predicting recall below 0.90 on A3, X2 or both")
+    for source in ("A3", "X2"):
+        named = sorted(hypotheses.named_cells(audit, source, strict=False))
+        R.put(f"prereg.audit.named_h6.{source}", named, ", ".join(named), src,
+              f"checks the audit names as failing on {source}, known required_field ink excluded")
+
+
+def census_tool_status(sheet, first_code, tiers=("T-A", "T-B")):
+    """{repo: "contradicted" | "agree" | "no objective or human episode"} and the contradicted
+    episodes. A tool is contradicted when any episode of an allowed tier has a first code other
+    than M0, agrees when every such episode is M0."""
+    by_tool, contra = {}, []
+    for r in sheet:
+        by_tool.setdefault(r["repo"], [])
+        if r["tier"] not in tiers:
+            continue
+        code = first_code[r["episode_id"]]
+        by_tool[r["repo"]].append(code)
+        if code != "M0":
+            contra.append(r["episode_id"])
+    status = {t: ("no objective or human episode" if not c else
+                  "agree" if all(x == "M0" for x in c) else "contradicted")
+              for t, c in by_tool.items()}
+    return status, contra
+
+
+def census_extra_numbers(R):
+    base = os.path.join(data.STUDY, "census")
+    sheet = list(csv.DictReader(open(os.path.join(base, "sheet.csv"), encoding="utf-8")))
+    resolved = os.path.join(base, "resolved.csv")
+    coder1 = list(csv.DictReader(open(os.path.join(base, "coder1.csv"), encoding="utf-8")))
+    if os.path.exists(resolved):
+        codes = list(csv.DictReader(open(resolved, encoding="utf-8")))
+        src, who = "census/sheet.csv, census/resolved.csv", "resolved codes"
+    else:
+        codes = coder1
+        src, who = "census/sheet.csv, census/coder1.csv", "coder 1 only, single coder, before " \
+            "agreement"
+    first = {r["episode_id"]: r["code_first"] for r in codes}
+    status, contra = census_tool_status(sheet, first)
+    tools_c = sorted(t for t, s in status.items() if s == "contradicted")
+    tools_a = sorted(t for t, s in status.items() if s == "agree")
+    R.put("census.tools_contradicted_ab", len(tools_c), count(len(tools_c)), src,
+          f"tools with a tier T-A or T-B episode whose first code is not M0 ({who})")
+    R.put("census.tools_contradicted_ab.list", tools_c, ", ".join(tools_c), src, who)
+    R.put("census.tools_agree_ab", len(tools_a), count(len(tools_a)), src,
+          f"tools whose every tier T-A or T-B episode is coded M0 ({who})")
+    R.put("census.tools_agree_ab.list", tools_a, ", ".join(tools_a), src, who)
+    R.put("census.episodes_contradicted_ab", len(contra), count(len(contra)), src,
+          f"tier T-A or T-B episodes whose first code is not M0 ({who})")
+    for tier in sorted({r["tier"] for r in sheet}):
+        eps = [r for r in sheet if r["tier"] == tier]
+        n = sum(first[r["episode_id"]] != "M0" for r in eps)
+        R.put(f"census.contradicted.{tier}", [n, len(eps)], f"{n} of {len(eps)}", src,
+              f"tier {tier} episodes whose first code is not M0 ({who})")
+    for tool, s in sorted(status.items()):
+        R.put(f"census.tool.{tool}.status_ab", s, s, src, f"on tiers T-A and T-B ({who})")
+        _, c_all = census_tool_status([r for r in sheet if r["repo"] == tool], first,
+                                      tiers=("T-A", "T-B", "T-C"))
+        R.put(f"census.tool.{tool}.contradicted_any_tier", len(c_all), count(len(c_all)), src,
+              f"episodes of any tier whose first code is not M0 ({who})")
+    for tool in sorted(status):
+        for tier in sorted({r["tier"] for r in sheet}):
+            eps = [r for r in sheet if r["repo"] == tool and r["tier"] == tier]
+            if eps:
+                n = sum(first[r["episode_id"]] != "M0" for r in eps)
+                R.put(f"census.tool.{tool}.contradicted.{tier}", [n, len(eps)],
+                      f"{n} of {len(eps)}", src,
+                      f"tier {tier} episodes of {tool} whose first code is not M0 ({who})")
+    R.put("census.resolved.basis", who, who, src, "what the census.resolved.* counts rest on")
+    for code, n in sorted(Counter(first.values()).items()):
+        R.put(f"census.resolved.{code}", n, count(n), src, f"first codes ({who})")
+    for code, n in sorted(Counter(r["code_second"] for r in coder1 if r["code_second"]).items()):
+        R.put(f"census.coder1.second.{code}", n, count(n), "census/coder1.csv",
+              "episodes coder 1 gave this second code (coder 1 only)")
+    for r in sheet:
+        e = r["episode_id"]
+        R.put(f"census.{e}.claim_text", r["self_generated_claim"], r["self_generated_claim"],
+              "census/sheet.csv", "the self-generated claim, quoted at the pinned commit")
+        R.put(f"census.{e}.finding_text", r["independent_finding"], r["independent_finding"],
+              "census/sheet.csv", "the independent finding, quoted at the pinned commit")
+
+
+def shipped_failure_numbers(R):
+    """The failure metric as dossier-preflight ships it in thresholds.json, per tag."""
+    for tag, prefix in (("v0.1.0", "v0.shipped"), ("v0.2.0", "v020.shipped")):
+        tags = subprocess.run(["git", "-C", data.DP, "tag", "-l", tag], capture_output=True,
+                              text=True, check=True).stdout.split()
+        if not tags:
+            R.put(f"{prefix}.status", "not tagged", "not tagged", f"dossier-preflight@{tag}",
+                  "tag absent")
+            continue
+        src = f"dossier-preflight@{tag}:thresholds.json"
+        th = json.loads(dp_show(tag, "thresholds.json"))["thresholds"]
+        for check, t in sorted(th.items()):
+            v = t.get("recall_with_ink_on_the_damaged_field")
+            if not isinstance(v, dict):
+                continue
+            for lv, rate in sorted(v.items(), key=lambda kv: float(kv[0])):
+                R.put(f"{prefix}.{check}.recall_with_ink_on_the_damaged_field.{lv}", rate,
+                      f4(rate), src, "the stored value per ink level")
+            d = t.get("ink_on_the_damaged_field")
+            if isinstance(d, dict):
+                for shape, levels in sorted(d.get("by_shape", {}).items()):
+                    for lv, c in sorted(levels.items(), key=lambda kv: float(kv[0])):
+                        R.put(f"{prefix}.{check}.ink_on_the_damaged_field.{shape}.{lv}",
+                              [c["k"], c["n"]], f"{c['k']} of {c['n']}", src,
+                              "the stored per-shape count")
+
+
 def build():
     R = Registry()
     H = json.load(open(os.path.join(data.RESULTS, "hypotheses.json"), encoding="utf-8"))
     P = json.load(open(os.path.join(data.RESULTS, "protocols.json"), encoding="utf-8"))
     v0_numbers(R)
     arm_numbers(R, P)
+    arm_reading_numbers(R)
     hypotheses_numbers(R, H)
+    hypotheses_extra_numbers(R, H)
     protocol_numbers(R, P)
+    protocol_extra_numbers(R, P)
     census_numbers(R)
+    census_extra_numbers(R)
+    a4_numbers(R)
+    naf_numbers(R)
+    prereg_numbers(R)
+    shipped_failure_numbers(R)
     return R.d
 
 

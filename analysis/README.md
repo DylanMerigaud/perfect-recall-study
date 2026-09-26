@@ -53,8 +53,21 @@ $PY -m pytest analysis/tests -q
 - `x2.py`: the real captures as a target. It plugs in by path: until `x2/readings.jsonl`
   exists, every X2 result reads "not tested yet", and the next run after it lands scores it
   with no code change.
+- `a4.py`: A4 (the targeted ink run with every shape) scored at the shipped thresholds, per
+  check, per ink level, pooled and per shape (fold, speck, stroke), both sides (recall on the
+  damaged dossier, false alarm on the clean one).
 - `exhibits.py`: the tables and the one figure.
-- `numbers.py`: the registry the manuscript's `{{key}}` placeholders are rendered from.
+- `numbers.py`: the registry the manuscript's `{{key}}` placeholders are rendered from. Besides
+  the three results files it reads `$PR_ARCHIVE/a4/readings.jsonl.gz` (through `a4.py`),
+  `$PR_ARCHIVE/x3/naf_fields_pixel.csv`, `results/naf-crop-audit.csv` (the crop audit of
+  `results/naf-reading.md`, read by eye, one row per field), `results/naf-variants.csv` (the
+  output of `naf/diagnostics/crop_audit.py`), `prereg/coverage-audit.csv`, `census/*.csv`
+  (census counts rest on coder 1 alone until `census/resolved.csv` exists, and their `how`
+  says so), and dossier-preflight's `thresholds.json` at the tags v0.1.0 and v0.2.0.
+
+The thresholds as shipped are the preregistered file, sha256 checked: `data.py` reads
+dossier-preflight's working copy while it has that sha256, and otherwise the file at the
+preregistered commit (`git show`), since v0.2.0 adds measurements to it without moving a value.
 
 ## Verdict vocabulary
 

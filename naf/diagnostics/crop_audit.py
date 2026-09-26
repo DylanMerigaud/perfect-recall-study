@@ -12,6 +12,9 @@ outline in blue. Must run under dossier-preflight's venv:
   $PY naf/diagnostics/crop_audit.py OUT $(python3 naf/diagnostics/audit_sample.py $AR/x3 | awk '{print $2}')
 
 NAF is read from $AR/x3/NAF. Takes about 10 minutes on the 70 images.
+
+The committed run's OUT/variants.csv is results/naf-variants.csv, which analysis/numbers.py
+reads for the pnaf.sensitivity.* keys.
 """
 import sys, os, csv, json
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
