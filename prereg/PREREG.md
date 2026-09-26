@@ -445,3 +445,52 @@ text above it is unchanged.
   is therefore not tested. The paper states this.
 - **Machine-readable.** `results/naf.json` carries a `validity` object with
   `pixel_measure_valid: false`, written by `naf/measure.py combine`.
+
+## A2, 2026-09-26, before any A3b reading: a corrected Augraphy arm with one seed per page
+
+Written on 2026-09-26, after the A3 arm had been read and scored and after round 1 of the
+adversarial review, and BEFORE any image of the new arm A3b exists. It adds an arm; it changes
+nothing above it and no A3 number.
+
+- **The flaw in A3, disclosed.** `grid/augraphy_render.py` seeded `random`, `numpy.random` and
+  OpenCV with the job seed (11, 23 or 37) before every page. Augraphy draws both the structure of
+  its default pipeline (which augmentations run) and their parameters from that state, so every
+  page sharing a (seed, dpi) cell received nearly the same draw: at seed 37, 3 to 5 distinct
+  augmentation sets per dpi over 294 pages each, and ShadowCast, Letterpress, Stains,
+  LightingGradient, PageBorder and Faxify fired on 0 of 2,646 pages. A3 is therefore about nine
+  pipeline realizations, not 2,646 independent degradations, and its intervals (Wilson, identity
+  bootstrap) understate its uncertainty. A3 stays reported as preregistered, with this flaw
+  stated next to every A3 number.
+- **A3b, the corrected arm.** The same design as A3 (section 3.3): 6 identities x 49 pages x dpi
+  {150, 200, 300} x replicate seed {11, 23, 37} = **2,646** images, one reading each, the same
+  unmodified `default_augraphy_pipeline()` of Augraphy 8.2.6, the same render and page-geometry
+  overrides, the same greyscale conversion, read by the same `grid/read_images.py`. The ONE
+  change: before each page, `random`, `numpy.random` and OpenCV are seeded with a per-page seed,
+  the first 4 bytes (big endian) of SHA-256 of the string `identity|variant|piece|dpi|seed`
+  (`seed` the replicate seed), so the pipeline structure and its draws vary independently across
+  pages and each augmentation class appears near its pipeline probability. The replicate seed
+  keeps its role: seeds 11 and 23 are calibration, seed 37 is the report seed. The per-page seed
+  is written to the manifest (`page_seed`). The default of `grid/augraphy_render.py` keeps the old
+  behaviour, so A3 stays reproducible byte for byte.
+- **field_ink_share on A3b** uses the axis-locked registration that the committed A3 manifest
+  already uses (axis 0, quarter turn 0), from the start; no recomputation pass.
+- **What runs on A3b.** H1 (the same criterion: recall below 0.50 on pages with
+  `field_ink_share >= 0.005`, the same 0.5% rule, the same shipped setting), H5 (P5 pools A1 and
+  A3b seeds 11 and 23, reports on A1 and A3b seed 37), the A3 part of H6 (source A3b in place of
+  A3, same primary and strict scorings), P4 (reports on A3b seed 37), P5, and the secondary target
+  of Table 1 (A3b seed 37 for P1 to P3 and P6). A3b is the corrected arm and the paper's primary
+  generator result; the A3 figures are reported next to it as the preregistered arm.
+- **Declared sensitivities, before any A3b reading** (exploratory, intervals, no verdict): a
+  cluster bootstrap over the (seed, dpi) cell, over the augmentation set, and over the field
+  instance (template x role) next to the preregistered identity bootstrap; H1 bounds with the
+  pages whose share cannot be measured counted as all detected and as all missed; H1 per target;
+  H1 by dpi, by seed and by augmentation class (mark: Scribbles or Markup; bleed-through:
+  BleedThrough; binding: BookBinding or BindingsAndFasteners; photocopy family: BadPhotoCopy,
+  DirtyDrum, DirtyRollers, LowInkRandomLines, LowInkPeriodicLines); the wrong-quarter-turn rate,
+  `rotated_page` and `cropped_page` recall and H6 with and without the augmentations a loose
+  single sheet cannot receive (BookBinding, BindingsAndFasteners, Folding, Squish); an eye audit
+  of a seeded random sample of at least 30 inked and 20 not-inked A3b fields.
+- **The measured state.** A3b is rendered and read at the dossier-preflight tag `study-a3b`:
+  v0.2.0 plus the per-page seed option of `grid/augraphy_render.py` and its test, with no change
+  to any reading, sensor, check or threshold. Every result file of this study is regenerated at
+  that tag, so the recorded commit is the one named here.
