@@ -1,0 +1,769 @@
+{
+  "a3_cells_at_shipped_thresholds": {
+    "consistency": {
+      "false_alarm_rate": 0.8888888888888888,
+      "false_alarm_wilson_95": [
+        0.7780529897881872,
+        0.9480697750300044
+      ],
+      "fp": 48,
+      "interval": {
+        "cluster_bootstrap_95": [
+          0.9259259259259259,
+          1.0
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.8746482308272452,
+          0.9897836320515544
+        ]
+      },
+      "k": 52,
+      "n": 54,
+      "n_neg": 54,
+      "positives_excluded_for_ink": 0,
+      "positives_unscored": 0,
+      "recall": 0.9629629629629629,
+      "recall_unscored_as_miss": 0.9629629629629629,
+      "settings": "min_conf=0.0, text_sensor=zone",
+      "threshold": 0.3939
+    },
+    "cropped_page": {
+      "false_alarm_rate": 0.2962962962962963,
+      "false_alarm_wilson_95": [
+        0.23939061641621132,
+        0.36032091901453717
+      ],
+      "fp": 64,
+      "interval": {
+        "cluster_bootstrap_95": [
+          0.794392523364486,
+          0.827906976744186
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.7544005654978688,
+          0.8589507775678384
+        ]
+      },
+      "k": 173,
+      "n": 213,
+      "n_neg": 216,
+      "positives_excluded_for_ink": 0,
+      "positives_unscored": 0,
+      "recall": 0.812206572769953,
+      "recall_unscored_as_miss": 0.812206572769953,
+      "settings": "no settings",
+      "threshold": 0.0879
+    },
+    "expiry": {
+      "false_alarm_rate": 0.0,
+      "false_alarm_wilson_95": [
+        0.0,
+        0.4898908364545973
+      ],
+      "fp": 0,
+      "interval": {
+        "cluster_bootstrap_95": [
+          1.0,
+          1.0
+        ],
+        "n_clusters": 2,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.3423802275066531,
+          1.0
+        ]
+      },
+      "k": 2,
+      "n": 2,
+      "n_neg": 4,
+      "positives_excluded_for_ink": 0,
+      "positives_unscored": 106,
+      "recall": 1.0,
+      "recall_unscored_as_miss": 0.018518518518518517,
+      "settings": "min_conf=0.0, text_sensor=page",
+      "threshold": 0.0
+    },
+    "forbidden_value": {
+      "false_alarm_rate": 0.0,
+      "false_alarm_wilson_95": [
+        0.0,
+        0.008813890333169308
+      ],
+      "fp": 0,
+      "interval": {
+        "cluster_bootstrap_95": [
+          0.06790123456790123,
+          0.13580246913580246
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.06171099822606378,
+          0.1544078123268842
+        ]
+      },
+      "k": 16,
+      "n": 162,
+      "n_neg": 432,
+      "positives_excluded_for_ink": 0,
+      "positives_unscored": 0,
+      "recall": 0.09876543209876543,
+      "recall_unscored_as_miss": 0.09876543209876543,
+      "settings": "min_conf=0.0, text_sensor=page",
+      "threshold": 0.7214
+    },
+    "required_checkbox": {
+      "false_alarm_rate": 0.7361111111111112,
+      "false_alarm_wilson_95": [
+        0.6735787819817295,
+        0.7903919383144486
+      ],
+      "fp": 159,
+      "interval": {
+        "cluster_bootstrap_95": [
+          0.9305555555555556,
+          0.9583333333333334
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.9054189878387191,
+          0.9679376621305571
+        ]
+      },
+      "k": 204,
+      "n": 216,
+      "n_neg": 216,
+      "positives_excluded_for_ink": 0,
+      "positives_unscored": 0,
+      "recall": 0.9444444444444444,
+      "recall_unscored_as_miss": 0.9444444444444444,
+      "settings": "disc_ratio=0.3, ink_threshold=128",
+      "threshold": -14.375
+    },
+    "required_field": {
+      "false_alarm_rate": 0.3176638176638177,
+      "false_alarm_wilson_95": [
+        0.29383677405960484,
+        0.3424859121405254
+      ],
+      "fp": 446,
+      "interval": {
+        "cluster_bootstrap_95": [
+          0.80859375,
+          0.8440545808966862
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.7905506096065477,
+          0.8562504478738974
+        ]
+      },
+      "k": 422,
+      "n": 511,
+      "n_neg": 1404,
+      "positives_excluded_for_ink": 893,
+      "positives_unscored": 0,
+      "recall": 0.8258317025440313,
+      "recall_unscored_as_miss": 0.8258317025440313,
+      "settings": "text_sensor=ink, ink_threshold=128",
+      "threshold": -0.345
+    },
+    "resolution": {
+      "false_alarm_rate": 0.009259259259259259,
+      "false_alarm_wilson_95": [
+        0.0025429063349523624,
+        0.0331257926573052
+      ],
+      "fp": 2,
+      "interval": {
+        "cluster_bootstrap_95": [
+          1.0,
+          1.0
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.9825262312154358,
+          1.0
+        ]
+      },
+      "k": 216,
+      "n": 216,
+      "n_neg": 216,
+      "positives_excluded_for_ink": 0,
+      "positives_unscored": 0,
+      "recall": 1.0,
+      "recall_unscored_as_miss": 1.0,
+      "settings": "no settings",
+      "threshold": -148.5
+    },
+    "rotated_page": {
+      "false_alarm_rate": 0.0,
+      "false_alarm_wilson_95": [
+        0.0,
+        0.01747376878456431
+      ],
+      "fp": 0,
+      "interval": {
+        "cluster_bootstrap_95": [
+          0.49074074074074076,
+          0.5740740740740741
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.4612984944873333,
+          0.5932862961357465
+        ]
+      },
+      "k": 114,
+      "n": 216,
+      "n_neg": 216,
+      "positives_excluded_for_ink": 0,
+      "positives_unscored": 0,
+      "recall": 0.5277777777777778,
+      "recall_unscored_as_miss": 0.5277777777777778,
+      "settings": "no settings",
+      "threshold": 0.3585
+    },
+    "signature": {
+      "false_alarm_rate": 0.35185185185185186,
+      "false_alarm_wilson_95": [
+        0.23823011108114728,
+        0.485151692797637
+      ],
+      "fp": 19,
+      "interval": {
+        "cluster_bootstrap_95": [
+          1.0,
+          1.0
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.9335864119091036,
+          1.0
+        ]
+      },
+      "k": 54,
+      "n": 54,
+      "n_neg": 54,
+      "positives_excluded_for_ink": 0,
+      "positives_unscored": 0,
+      "recall": 1.0,
+      "recall_unscored_as_miss": 1.0,
+      "settings": "ink_threshold=128, signature_sensor=components",
+      "threshold": -342.05
+    }
+  },
+  "exploratory": {
+    "h1_product_view": {
+      "k": 204,
+      "label": "exploratory sensitivity: abstention on (the product), same pages as H1",
+      "n_abstained": 0,
+      "n_judged": 515,
+      "n_pages": 515,
+      "recall_abstention_as_miss": 0.39611650485436894,
+      "recall_judged": 0.39611650485436894
+    },
+    "quarter_turns_A3": {
+      "all_checks": {
+        "miss_right": 695,
+        "miss_wrong": 139,
+        "pos_right": 2063,
+        "pos_wrong": 474,
+        "recall_right_turn": 0.6631119728550654,
+        "recall_wrong_turn": 0.7067510548523206,
+        "share_of_misses_on_wrong_turn": 0.16666666666666666,
+        "share_of_positives_on_wrong_turn": 0.18683484430429642,
+        "wilson_recall_right_turn": [
+          0.6424300020673591,
+          0.6831876195106417
+        ],
+        "wilson_recall_wrong_turn": [
+          0.6642365612465991,
+          0.7459413259625293
+        ]
+      },
+      "by_dpi": {
+        "150": {
+          "k": 141,
+          "n": 882,
+          "rate": 0.1598639455782313
+        },
+        "200": {
+          "k": 279,
+          "n": 882,
+          "rate": 0.3163265306122449
+        },
+        "300": {
+          "k": 80,
+          "n": 879,
+          "rate": 0.09101251422070535
+        }
+      },
+      "by_piece": {
+        "employment": {
+          "k": 282,
+          "n": 864,
+          "rate": 0.3263888888888889,
+          "wilson_95": [
+            0.2959518138650412,
+            0.35836292651660795
+          ]
+        },
+        "identity": {
+          "k": 77,
+          "n": 702,
+          "rate": 0.10968660968660969,
+          "wilson_95": [
+            0.08865937189857427,
+            0.13496231658145988
+          ]
+        },
+        "tax": {
+          "k": 67,
+          "n": 540,
+          "rate": 0.12407407407407407,
+          "wilson_95": [
+            0.0988957122361933,
+            0.1545631894069431
+          ]
+        },
+        "tax_es": {
+          "k": 74,
+          "n": 537,
+          "rate": 0.1378026070763501,
+          "wilson_95": [
+            0.11121157805192879,
+            0.16953882734743667
+          ]
+        }
+      },
+      "label": "exploratory, not preregistered: orientation fields recorded by grid/read_images.py on A3",
+      "misses_by_check": {
+        "consistency": {
+          "miss_right": 2,
+          "miss_wrong": 0,
+          "pos_right": 51,
+          "pos_wrong": 3,
+          "recall_right_turn": 0.9607843137254902,
+          "recall_wrong_turn": 1.0,
+          "unknown": 0
+        },
+        "cropped_page": {
+          "miss_right": 38,
+          "miss_wrong": 2,
+          "pos_right": 179,
+          "pos_wrong": 34,
+          "recall_right_turn": 0.7877094972067039,
+          "recall_wrong_turn": 0.9411764705882353,
+          "unknown": 0
+        },
+        "expiry": {
+          "miss_right": 0,
+          "miss_wrong": 0,
+          "pos_right": 2,
+          "pos_wrong": 0,
+          "recall_right_turn": 1.0,
+          "recall_wrong_turn": null,
+          "unknown": 0
+        },
+        "forbidden_value": {
+          "miss_right": 118,
+          "miss_wrong": 28,
+          "pos_right": 134,
+          "pos_wrong": 28,
+          "recall_right_turn": 0.11940298507462688,
+          "recall_wrong_turn": 0.0,
+          "unknown": 0
+        },
+        "required_checkbox": {
+          "miss_right": 12,
+          "miss_wrong": 0,
+          "pos_right": 185,
+          "pos_wrong": 31,
+          "recall_right_turn": 0.9351351351351351,
+          "recall_wrong_turn": 1.0,
+          "unknown": 0
+        },
+        "required_field": {
+          "miss_right": 477,
+          "miss_wrong": 55,
+          "pos_right": 1129,
+          "pos_wrong": 275,
+          "recall_right_turn": 0.5775022143489814,
+          "recall_wrong_turn": 0.8,
+          "unknown": 0
+        },
+        "resolution": {
+          "miss_right": 0,
+          "miss_wrong": 0,
+          "pos_right": 180,
+          "pos_wrong": 36,
+          "recall_right_turn": 1.0,
+          "recall_wrong_turn": 1.0,
+          "unknown": 0
+        },
+        "rotated_page": {
+          "miss_right": 48,
+          "miss_wrong": 54,
+          "pos_right": 162,
+          "pos_wrong": 54,
+          "recall_right_turn": 0.7037037037037037,
+          "recall_wrong_turn": 0.0,
+          "unknown": 0
+        },
+        "signature": {
+          "miss_right": 0,
+          "miss_wrong": 0,
+          "pos_right": 41,
+          "pos_wrong": 13,
+          "recall_right_turn": 1.0,
+          "recall_wrong_turn": 1.0,
+          "unknown": 0
+        }
+      },
+      "overall": {
+        "interval": {
+          "cluster_bootstrap_95": [
+            0.18291761148904007,
+            0.1950018932222643
+          ],
+          "n_clusters": 6,
+          "n_resamples": 10000,
+          "seed": 20260925,
+          "wilson_95": [
+            0.17470276273372548,
+            0.20455737597815568
+          ]
+        },
+        "k": 500,
+        "n": 2643,
+        "rate": 0.18917896329928113
+      }
+    }
+  },
+  "hypotheses": {
+    "H1": {
+      "by_dpi": {
+        "150": {
+          "k": 25,
+          "n": 163
+        },
+        "200": {
+          "k": 127,
+          "n": 257
+        },
+        "300": {
+          "k": 52,
+          "n": 95
+        }
+      },
+      "context_no_ink": {
+        "k": 380,
+        "n": 453,
+        "note": "same sensor, pages with field_ink_share < 0.0005"
+      },
+      "criterion": "on A3 pages with field_ink_share >= 0.005 in the emptied required field, the shipped required_field sensor's recall is below 0.50",
+      "estimate": 0.39611650485436894,
+      "exploratory_by_quarter_turn": {
+        "right_turn": {
+          "k": 76,
+          "n": 346
+        },
+        "wrong_turn": {
+          "k": 128,
+          "n": 169
+        }
+      },
+      "instances_share_not_measured": 95,
+      "instances_total": 1188,
+      "interval": {
+        "cluster_bootstrap_95": [
+          0.3684210526315789,
+          0.425531914893617
+        ],
+        "n_clusters": 6,
+        "n_resamples": 10000,
+        "seed": 20260925,
+        "wilson_95": [
+          0.35479444789891873,
+          0.43897685125052327
+        ]
+      },
+      "k": 204,
+      "n": 515,
+      "per_target_recall": {
+        "estimate": 0.38980509745127434,
+        "k": 260,
+        "n": 667
+      },
+      "shipped_settings": "text_sensor=ink, ink_threshold=128",
+      "source": "A3 readings (a3/readings.jsonl), a3/manifest.csv field_ink_share",
+      "threshold": -0.345,
+      "unit": "an (identity, instance, dpi, seed) page; detected when the check fires on at least one field id of the emptied role (a role can span several ids: the W-9 tax_id is three comb boxes)",
+      "verdict": "supported"
+    },
+    "H2": {
+      "criterion": "pooled recall >= 0.90 over the six content checks and per-dossier false-alarm rate <= 0.10 on unmarked real captures",
+      "verdict": "not tested yet"
+    },
+    "H3": {
+      "criterion": "on marked emptied fields (mark >= 1% of the field), shipped ink sensor recall < 0.50 and best OCR sensor recall >= 0.60",
+      "verdict": "not tested yet"
+    },
+    "H4": {
+      "criterion": "MAE of P1 > MAE of P5 on real captures and the paired cluster-bootstrap 95% interval of (P1 - P5) lies above zero",
+      "verdict": "not tested yet"
+    },
+    "H5": {
+      "P1_crowned": "text_sensor=ink, ink_threshold=190",
+      "P5_crowned": "text_sensor=ink, ink_threshold=160",
+      "criterion": "under P5 the shipped selection rule does not choose the added-ink sensor for required_field, while under P1 it does",
+      "estimate": null,
+      "interval": null,
+      "n": null,
+      "source": "results/protocols.json",
+      "verdict": "not supported"
+    },
+    "H6": {
+      "A3_part": {
+        "false_alarm_rows": [
+          {
+            "check": "resolution",
+            "correct": false,
+            "process": "sampling: dpi",
+            "rate": 0.009259259259259259
+          },
+          {
+            "check": "signature",
+            "correct": true,
+            "process": "ink loss (faded or broken print)",
+            "rate": 0.35185185185185186
+          },
+          {
+            "check": "consistency",
+            "correct": true,
+            "process": "ink loss (faded or broken print)",
+            "rate": 0.8888888888888888
+          }
+        ],
+        "primary": {
+          "dropped_no_positive": [],
+          "estimate": 0.25,
+          "false_predictions_over_predictions": [
+            3,
+            4
+          ],
+          "hits": [
+            "forbidden_value"
+          ],
+          "hits_over_failures": [
+            1,
+            4
+          ],
+          "named": [
+            "expiry",
+            "forbidden_value",
+            "required_checkbox",
+            "signature"
+          ],
+          "observed_failing": [
+            "cropped_page",
+            "forbidden_value",
+            "required_field",
+            "rotated_page"
+          ],
+          "verdict": "not supported"
+        },
+        "sensitivity_unscored_as_miss": {
+          "dropped_no_positive": [],
+          "estimate": 0.4,
+          "false_predictions_over_predictions": [
+            2,
+            4
+          ],
+          "hits": [
+            "expiry",
+            "forbidden_value"
+          ],
+          "hits_over_failures": [
+            2,
+            5
+          ],
+          "named": [
+            "expiry",
+            "forbidden_value",
+            "required_checkbox",
+            "signature"
+          ],
+          "observed_failing": [
+            "cropped_page",
+            "expiry",
+            "forbidden_value",
+            "required_field",
+            "rotated_page"
+          ],
+          "verdict": "not supported"
+        },
+        "strict": {
+          "dropped_no_positive": [],
+          "estimate": 0.25,
+          "false_predictions_over_predictions": [
+            3,
+            4
+          ],
+          "hits": [
+            "forbidden_value"
+          ],
+          "hits_over_failures": [
+            1,
+            4
+          ],
+          "named": [
+            "expiry",
+            "forbidden_value",
+            "required_checkbox",
+            "signature"
+          ],
+          "observed_failing": [
+            "cropped_page",
+            "forbidden_value",
+            "required_field",
+            "rotated_page"
+          ],
+          "verdict": "not supported"
+        }
+      },
+      "X2_part": "not tested yet",
+      "criterion": "the coverage audit names at least half of the (check, source) cells where observed recall falls below 0.90 on A3 or X2, excluding the known required_field ink failure",
+      "note": "the X2 part waits for the real captures; the A3 part is scored now, by the same rule restricted to source A3",
+      "verdict": "not tested yet",
+      "verdict_A3_part": "not supported"
+    },
+    "P-NAF": {
+      "band_as_preregistered": "common",
+      "criterion": "rare if upper 95% bound < 0.5%, occasional 0.5% to 5%, common above 5%",
+      "human_label_exploratory_lower_bound": {
+        "band": "occasional",
+        "cluster_bootstrap_95": [
+          0.018888216818995666,
+          0.039754811917476346
+        ],
+        "k": 159,
+        "label": "exploratory lower bound",
+        "n": 5550,
+        "n_images": 556,
+        "share": 0.028648648648648647,
+        "wilson_95": [
+          0.024575332076024844,
+          0.03337401005176324
+        ]
+      },
+      "pixel_cluster_bootstrap_95": [
+        0.29869822121006956,
+        0.5378151260504201
+      ],
+      "pixel_measure_valid": false,
+      "pixel_n_fields": 165,
+      "pixel_share": 0.4,
+      "pixel_wilson_95": [
+        0.32834532063406646,
+        0.4762050532462892
+      ],
+      "source": "results/naf.json (validity object; prereg amendment A1)",
+      "verdict": "not interpretable",
+      "why": "crop audit: 10 of 14 pixel-positive fields with no comment label carry only template residue (the field's own printed dotted or rule line, printed row numbers, paper noise) that the consensus holds a few pixels off or not at all; 7 of 17 medoid fields are positive against a consensus built with themselves; the count moves from 80 to 53 of 165 with the dilation radius (0 to 6 px). The pixel measure is not a prevalence of foreign ink."
+    }
+  },
+  "meta": {
+    "a3": {
+      "arm": "A3",
+      "dossiers": 54,
+      "keys": 54,
+      "keys_dropped": [],
+      "path": "a3/readings.jsonl",
+      "sha256": "6595fc04d1fede39abab0b8ee7c1c535c931d2b192db2b9f72c0411cd62f9f4b",
+      "status": "present"
+    },
+    "a3_variants_missing": [
+      [
+        [
+          0.0,
+          300,
+          100,
+          0.0,
+          11,
+          0.0,
+          "id01",
+          "g1",
+          false,
+          null,
+          null
+        ],
+        "cropped_page@tax_es"
+      ],
+      [
+        [
+          0.0,
+          300,
+          100,
+          0.0,
+          11,
+          0.0,
+          "id02",
+          "g1",
+          false,
+          null,
+          null
+        ],
+        "cropped_page@tax_es"
+      ],
+      [
+        [
+          0.0,
+          300,
+          100,
+          0.0,
+          23,
+          0.0,
+          "id06",
+          "g1",
+          false,
+          null,
+          null
+        ],
+        "cropped_page@tax_es"
+      ]
+    ],
+    "dossier_preflight_commit": "61b6af3a5d22c818aed06c09d8f8ecbe80527962",
+    "thresholds_sha256": "184351f68dacc89118f22efce0a052f6b596e07b7a24f93b0bdfdf1a7e4fe4a5",
+    "verdict_vocabulary": [
+      "supported",
+      "not supported",
+      "not tested",
+      "not tested yet",
+      "not interpretable"
+    ],
+    "x2": {
+      "status": "absent"
+    }
+  },
+  "x2_cells_at_shipped_thresholds": "not tested yet"
+}
