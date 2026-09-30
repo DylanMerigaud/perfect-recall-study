@@ -18,6 +18,33 @@ Raw readings, capture images and other large data will be deposited in a Zenodo 
 once collection is complete. That record is not published yet. Nothing here should be read as
 final until the Zenodo record and the accompanying manuscript are both public.
 
+## What is on GitHub, and what is on Zenodo
+
+This repository (MIT for code, CC BY 4.0 for data, see License below) carries the code, the
+preregistration and its coverage audit, the census evidence and coding sheets, and the results
+this study's scripts computed (`results/`, small tables, figures and the numbers registry): every
+file `git ls-files` lists here. It does not carry the raw readings, the capture images or the
+other large inputs those scripts read: `experiments/README.md` and `env/README.md` say so at
+each path that is still empty for exactly that reason. Those go to the Zenodo record above, not
+yet published; until it is, dossier-preflight's own checkout is the only place the raw readings
+exist (see `env/README.md`).
+
+## dossier-preflight's two tags
+
+- `v0.1.0` is applied retroactively: the annotated tag was created on 2026-09-25, pointing at
+  commit `42732f0`, dated 2026-08-22, the state dossier-preflight was already in when it was
+  described in the blog post
+  [`recall-1000-blind-to-dust`](https://dylan.merigaud.com/blog/recall-1000-blind-to-dust)
+  (published 2026-08-27) and in the query sent to IEEE Software's editor in chief on
+  2026-09-25. The blog post is independent evidence that this was the published state before
+  this study started measuring it: it is dated and hosted outside this repository, and it was
+  written before the tag existed.
+- `v0.2.0` is the state this study measures: the thresholds and checks as shipped after the
+  all-shapes failure metric and the independent-generator recall (T02 to T13 of the study
+  design). `v0.2.1` carries hygiene fixes found in round 1 review, with every threshold value
+  unchanged from `v0.1.0` (dossier-preflight's `JOURNAL.md` and `tests/test_failure_metric.py`
+  hold that proof).
+
 ## What each folder will reproduce
 
 - `prereg/` : the preregistration written before any new reading is taken (research questions,
@@ -72,3 +99,7 @@ expected inputs and failure modes.
 
 Code is MIT (see `LICENSE`). Data produced by this study is CC BY 4.0, except where a source
 carries its own terms; see `LICENSE-DATA.md`.
+
+## Status, 2026-09-30
+
+This study stopped before its real-capture arm (X2). The preregistration, the arms already run and their results stay here as they are; no paper is planned from them.
