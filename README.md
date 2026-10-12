@@ -7,16 +7,9 @@ self-generated score was checked against an independent source.
 
 ## Status
 
-This study is in progress. This repository holds the design, the preregistration, the code that
-will produce every reading and every number, and the checks a manuscript must pass before
-submission. The analysis of the generator arms and of the archival forms has run (`results/`);
-the real-capture arm (X2) and the second census coder are still to come, and every result that
-depends on them reads "not tested yet" or "pending coder 2". Results are provisional until the
-manuscript and the Zenodo record are public.
+The generator arms (A0 to A4) and the archival forms arm (X3) have run, and their results are in `results/`. The real-capture arm (X2) was not run: every result that depends on it reads "not tested yet", and a manuscript built on this study states that limit. The second census coder is still pending.
 
-Raw readings, capture images and other large data will be deposited in a Zenodo record with a DOI
-once collection is complete. That record is not published yet. Nothing here should be read as
-final until the Zenodo record and the accompanying manuscript are both public.
+The raw readings of A0 to A4 and the X3 field measures are on Zenodo, with their checksums: https://doi.org/10.5281/zenodo.23312819 . Images are not deposited; every image is regenerated from the seeds and the pinned commits.
 
 ## What is on GitHub, and what is on Zenodo
 
@@ -25,9 +18,8 @@ preregistration and its coverage audit, the census evidence and coding sheets, a
 this study's scripts computed (`results/`, small tables, figures and the numbers registry): every
 file `git ls-files` lists here. It does not carry the raw readings, the capture images or the
 other large inputs those scripts read: `experiments/README.md` and `env/README.md` say so at
-each path that is still empty for exactly that reason. Those go to the Zenodo record above, not
-yet published; until it is, dossier-preflight's own checkout is the only place the raw readings
-exist (see `env/README.md`).
+each path that is still empty for exactly that reason. The raw readings are in the Zenodo record
+above, whose README.md says where each file goes for `analysis/` to read it.
 
 ## dossier-preflight's two tags
 
@@ -100,6 +92,6 @@ expected inputs and failure modes.
 Code is MIT (see `LICENSE`). Data produced by this study is CC BY 4.0, except where a source
 carries its own terms; see `LICENSE-DATA.md`.
 
-## Status, 2026-09-30
+## Status, 2026-10-12
 
-This study stopped before its real-capture arm (X2). The preregistration, the arms already run and their results stay here as they are; no paper is planned from them.
+The study stopped before its real-capture arm (X2) on 2026-09-30. On 2026-10-12 the raw readings of the arms that ran were deposited on Zenodo (https://doi.org/10.5281/zenodo.23312819), and an article built on these results is being prepared, with the absence of real captures stated as a limit.
